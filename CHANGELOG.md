@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.1.3 (2023-04-20)
+### Fix
+* Add conf for hyfi ([`34da474`](https://github.com/entelecheia/hyfi-template/commit/34da47473c704ac0720cf0c7bfc74c298d5d9009))
+* Get init info from pyproject ([`bec4d6a`](https://github.com/entelecheia/hyfi-template/commit/bec4d6a60227c93a931fe17ae945bdf4475b91f4))
+* Get init info from pyproject ([`c7451cc`](https://github.com/entelecheia/hyfi-template/commit/c7451ccd0ded5ac82109baa8d4f47549ba0edd76))
+
 ## v0.1.2 (2023-04-20)
 ### Fix
 * **init:** Update package metadata ([`2e2f5cd`](https://github.com/entelecheia/hyfi-template/commit/2e2f5cdb30a9958d3171cc626627e4ceab7e87e3))
