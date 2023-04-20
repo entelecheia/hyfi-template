@@ -1,20 +1,20 @@
 # HyFI-Template
 
+[![pypi-image]][pypi-url]
 [![license-image]][license-url]
 [![version-image]][release-url]
 [![release-date-image]][release-url]
-[![conventional-commits-image]][conventional commits]
-[![jupyter-book-image]][jupyter book]
+[![jupyter-book-image]][docs-url]
 
 <!-- Links: -->
 [hyperfast python template]: https://github.com/entelecheia/hyperfast-python-template
 
+[pypi-image]: https://badge.fury.io/py/hyfi-template.svg
 [license-image]: https://img.shields.io/github/license/entelecheia/hyfi-template
 [license-url]: https://github.com/entelecheia/hyfi-template/blob/main/LICENSE
 [version-image]: https://img.shields.io/github/v/release/entelecheia/hyfi-template?sort=semver
 [release-date-image]: https://img.shields.io/github/release-date/entelecheia/hyfi-template
 [release-url]: https://github.com/entelecheia/hyfi-template/releases
-[conventional-commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white
 [jupyter-book-image]: https://jupyterbook.org/en/stable/_images/badge.svg
 
 [repo-url]: https://github.com/entelecheia/hyfi-template
