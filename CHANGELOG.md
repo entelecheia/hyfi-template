@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.5 (2023-04-20)
+### Fix
+* **book:** Add usage and examples ([`0a9ac32`](https://github.com/entelecheia/hyfi-template/commit/0a9ac322c747d45a0ecc5803537cba96df895ee1))
+
 ## v0.1.4 (2023-04-20)
 ### Fix
 * **version:** Update version ([`c0ae20c`](https://github.com/entelecheia/hyfi-template/commit/c0ae20c7274f133d77ac349f11db9bcc1b4ae369))
