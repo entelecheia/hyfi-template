@@ -1,7 +1,7 @@
 import os
 
 import toml
-from hyfi import about, global_config
+from hyfi import HyFI, about, global_config
 
 from ._version import __version__
 
