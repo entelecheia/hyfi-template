@@ -6,7 +6,7 @@ from ._version import __version__
 
 # Read and parse pyproject.toml
 current_dir = os.path.dirname(os.path.abspath(__file__))
-root_dir = os.path.dirname(current_dir)
+root_dir = os.path.dirname(os.path.dirname(current_dir))
 pyproject_path = os.path.join(root_dir, "pyproject.toml")
 
 with open(pyproject_path) as f:
