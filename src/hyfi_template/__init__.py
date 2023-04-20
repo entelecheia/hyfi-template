@@ -19,7 +19,7 @@ about.author = tool_data.get("authors", ["Author name"])[0]
 about.description = tool_data.get("description", "package description")
 about.homepage = tool_data.get("homepage", "https://package.homepage")
 about.version = __version__
-global_config.hyfi_package_config_path = "pkg://{}.conf".format(about.name)
+global_config.hyfi_package_config_path = "pkg://hyfi_template.conf"
 
 
 def get_version() -> str:
