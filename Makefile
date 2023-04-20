@@ -184,6 +184,9 @@ install-commitzen: install-poetry ## install commitzen (pre-requisite for commit
 install-precommit: install-commitzen ## install pre-commit
 	@pre-commit --version &> /dev/null || poetry add pre-commit --group dev || true
 
+install-precommit-hooks: install-precommit ## install pre-commit hooks
+	@pre-commit install
+
 install: ## install the package
 	@poetry install --without dev
 
@@ -198,12 +201,11 @@ remove-template: ## remove the template files (Warning: if you do this, you can'
 
 init-project: install-copier install-precommit-hooks ## initialize the project (Warning: do this only once!)
 	@copier gh:entelecheia/hyperfast-python-template .
-	@copier --answers-file .copier-hyfi-config.yaml gh:entelecheia/hyfi-template .
+	@copier . .
 
 init-git: ## initialize git
 	@git init
 
 reinit-project: install-copier ## reinitialize the project
 	@copier --answers-file .copier-config.yaml gh:entelecheia/hyperfast-python-template .
-	@copier --answers-file .copier-hyfi-config.yaml gh:entelecheia/hyfi-template .
-
+	@copier --answers-file .copier-hyfi-config.yaml . .
