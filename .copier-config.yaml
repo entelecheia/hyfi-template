@@ -1,0 +1,22 @@
+# Changes here will be overwritten by Copier; do NOT edit manually
+_commit: v0.1.10
+_src_path: gh:entelecheia/hyperfast-python-template
+author: Young Joon Lee
+copyright_year: 2023
+documentaion_tool: jupyter-book
+documentation_url: https://entelecheia.github.io/hyfi-template
+email: entelecheia@hotmail.com
+friendly_name: HyFI-Template
+github_repo_name: hyfi-template
+github_username: entelecheia
+package_name: hyfi_template
+project_description: HyFI-Template is a ready-to-use GitHub template repository designed
+    to streamline the process of initializing new projects based on HyFI, a robust
+    framework for building interfaces for Python applications. HyFI leverages the
+    power of the Hydra configuration system and the Pydantic data validation library,
+    offering a comprehensive set of tools to create flexible and adaptable interfaces
+    for various Python projects.
+project_license: MIT
+project_name: hyfi-template
+project_short_description: A GitHub Template Repository for HyFI-based Projects
+
