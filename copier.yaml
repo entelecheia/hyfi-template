@@ -19,6 +19,5 @@ _tasks:
 
 # questions
 package_name:
-  default: "{{ project_name | replace('-', '_') }}"
   type: str
   help: What is your Python module name? (it will be used in `import package_name`)
