@@ -1,15 +1,8 @@
 """Command line interface for {{package_name}}"""
 
 # Importing the libraries
-
-from . import __version__
-
-
-def main() -> None:
-    """This is the cli function of the package"""
-    print("This is the cli function of the package")
-    print(f"The version of the package is: {__version__}")
+from hyfi import hydra_main
 
 
 if __name__ == "__main__":
-    main()
+    hydra_main()
