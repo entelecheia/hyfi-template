@@ -1,8 +1,9 @@
 # Changes here will be overwritten by Copier; do NOT edit manually
-_commit: v0.2.2
+_commit: v0.2.3
 _src_path: gh:entelecheia/hyperfast-python-template
-another_template_source: gh:entelecheia/hyfi-template
 author: Young Joon Lee
+code_template_answers_file: .copier-hyfi-config.yaml
+code_template_source: gh:entelecheia/hyfi-template
 copyright_year: 2023
 documentaion_tool: jupyter-book
 documentation_url: https://entelecheia.github.io/hyfi-template
