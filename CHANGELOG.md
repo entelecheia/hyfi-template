@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.4 (2023-04-20)
+### Fix
+* **version:** Update version ([`c0ae20c`](https://github.com/entelecheia/hyfi-template/commit/c0ae20c7274f133d77ac349f11db9bcc1b4ae369))
+
 ## v0.1.3 (2023-04-20)
 ### Fix
 * Add conf for hyfi ([`34da474`](https://github.com/entelecheia/hyfi-template/commit/34da47473c704ac0720cf0c7bfc74c298d5d9009))
