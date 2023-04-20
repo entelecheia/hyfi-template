@@ -1,4 +1,4 @@
-# HyFI-Template: A GitHub Template Repository for HyFI-based Projects
+# HyFI-Template: A Template for HyFI-based Projects
 
 [![pypi-image]][pypi-url]
 [![license-image]][license-url]
