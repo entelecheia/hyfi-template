@@ -15,7 +15,7 @@ _answers_file: .copier-hyfi-config.yaml
 
 _tasks:
   # Strings get executed under system's default shell
-  - "[ -f requirements.txt ] && poetry add $(shell cat requirements.txt | tr '\n' ' ')"
+  - "[ -f requirements.txt ] && poetry add $(cat requirements.txt | tr '\n' ' ')"
 
 # questions
 package_name:

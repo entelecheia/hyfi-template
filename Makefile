@@ -208,4 +208,4 @@ init-git: ## initialize git
 
 reinit-project: install-copier ## reinitialize the project
 	@copier --answers-file .copier-config.yaml gh:entelecheia/hyperfast-python-template .
-	@copier --answers-file .copier-hyfi-config.yaml . .
+	@copier --answers-file .copier-hyfi-config.yaml --vcs-ref=HEAD gh:entelecheia/hyfi-template .
