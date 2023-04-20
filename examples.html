@@ -252,18 +252,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Whether to print verbose messages.</p></li>
 </ul>
 <p>We’ll check if we’re running in Google Colab, and if so, we’ll mount Google Drive.</p>
-</section>
-<section id="id1">
-<h2>Initialize Workspace<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>We’ll initialize the workspace using the <code class="docutils literal notranslate"><span class="pre">HyFI.init_workspace</span></code> function. The function takes the following parameters:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">workspace</span></code>: The root workspace directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code>: The project subdirectory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">task</span></code>: The specific task within the project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">log_level</span></code>: Logging level for the workspace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Whether to print verbose messages.</p></li>
-</ul>
-<p>We’ll check if we’re running in Google Colab, and if so, we’ll mount Google Drive.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
@@ -410,7 +398,6 @@ INFO:hyfi.env:compose config with overrides: [&#39;+path=__default__&#39;]
 <li><a class="reference internal" href="#">HyFI Template Example</a><ul>
 <li><a class="reference internal" href="#check-version">Check Version</a></li>
 <li><a class="reference internal" href="#initialize-workspace">Initialize Workspace</a></li>
-<li><a class="reference internal" href="#id1">Initialize Workspace</a></li>
 <li><a class="reference internal" href="#compose-configuration">Compose Configuration</a></li>
 <li><a class="reference internal" href="#display-configuration">Display Configuration</a></li>
 </ul>
