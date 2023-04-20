@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="API Reference" href="api.html" /><link rel="prev" title="HyFI-Template" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="HyFI Template Example" href="examples.html" /><link rel="prev" title="HyFI-Template" href="index.html" />
 
     <!-- Generated with Sphinx 5.0.2 and Furo 2023.03.27 -->
         <title>Usage - HyFI-Template</title>
@@ -150,7 +150,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -172,8 +172,7 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">HyFI Template Example</a></li>
 </ul>
 
 </div>
@@ -202,7 +201,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -210,6 +209,60 @@
         <article role="main">
           <section class="tex2jax_ignore mathjax_ignore" id="usage">
 <h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h1>
+<section id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
+<p>HyFI-Template provides an ideal starting point for developers looking to build projects using the HyFI framework, with key features including:</p>
+<ul class="simple">
+<li><p><strong>Pre-configured structure</strong>: The template repository comes with a pre-defined project structure, ensuring a consistent and organized layout for HyFI-based applications.</p></li>
+<li><p><strong>Quick project initialization</strong>: With the <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">init-project</span></code> command, developers can easily initialize a new project, automatically setting up the necessary files, directories, and configurations.</p></li>
+<li><p><strong>Hydra integration</strong>: The template repository is built around the Hydra configuration system, providing a flexible and powerful foundation for managing configurations in HyFI-based projects.</p></li>
+<li><p><strong>Pydantic integration</strong>: HyFI-Template incorporates the Pydantic data validation library, allowing developers to easily define and validate data structures for their application interfaces.</p></li>
+<li><p><strong>Best practices</strong>: The template repository follows industry best practices for Python project organization and structure, ensuring that developers have a solid starting point for building high-quality applications.</p></li>
+<li><p><strong>Customizable</strong>: Developers can easily customize the template repository to suit their specific requirements and preferences, tailoring it to the needs of their projects.</p></li>
+<li><p><strong>Documentation</strong>: The template repository includes clear instructions and guidelines for getting started with a HyFI-based project, helping developers quickly familiarize themselves with the framework and its features.</p></li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<p>To begin using HyFI-Template for your project, simply follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Click the “Use this template” button on the <a class="reference external" href="https://github.com/hyfi/hyfi-template">HyFI-Template GitHub repository</a> to create a new repository based on the template.</p></li>
+<li><p>Clone the newly created repository to your local machine.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">init-project</span></code> to initialize the project with the necessary files and configurations.</p></li>
+<li><p>Follow the provided documentation and guidelines to start building your HyFI-based application.</p></li>
+</ol>
+<p>By using HyFI-Template as the foundation for your project, you’ll be well on your way to creating powerful and adaptable interfaces for your Python applications.</p>
+</section>
+<section id="managing-actions-secrets-and-variables-in-your-project">
+<h2>Managing Actions Secrets and Variables in Your Project<a class="headerlink" href="#managing-actions-secrets-and-variables-in-your-project" title="Permalink to this heading">#</a></h2>
+<p>When using the HyFI-Template for your project, there are several GitHub Actions secrets and variables that you need to add to ensure proper functioning of the release action and optional JupyterBook deployment.</p>
+<section id="adding-pypi-api-token-and-test-pypi-api-token">
+<h3>Adding PYPI_API_TOKEN and TEST_PYPI_API_TOKEN<a class="headerlink" href="#adding-pypi-api-token-and-test-pypi-api-token" title="Permalink to this heading">#</a></h3>
+<p>To automate the release process of your project to PyPI, you need to provide two tokens: <code class="docutils literal notranslate"><span class="pre">PYPI_API_TOKEN</span></code> and <code class="docutils literal notranslate"><span class="pre">TEST_PYPI_API_TOKEN</span></code>. These tokens will be used by the GitHub Actions workflow to authenticate with PyPI and TestPyPI, respectively.</p>
+<ol class="arabic simple">
+<li><p>Generate an API token for your PyPI account by following the instructions in the <a class="reference external" href="https://pypi.org/manage/account/token/">official PyPI documentation</a>.</p></li>
+<li><p>Generate an API token for your TestPyPI account by following the instructions in the <a class="reference external" href="https://test.pypi.org/manage/account/token/">official TestPyPI documentation</a>.</p></li>
+<li><p>In your GitHub repository, go to the “Settings” tab and click on “Secrets” in the left sidebar.</p></li>
+<li><p>Click the “New repository secret” button.</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">PYPI_API_TOKEN</span></code> secret with the value set to the token generated for your PyPI account.</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">TEST_PYPI_API_TOKEN</span></code> secret with the value set to the token generated for your TestPyPI account.</p></li>
+</ol>
+<p>By providing these tokens, your project’s release action will have the necessary permissions to publish your package to PyPI and TestPyPI.</p>
+</section>
+<section id="optionally-adding-cname-for-jupyterbook-deployment">
+<h3>Optionally Adding CNAME for JupyterBook Deployment<a class="headerlink" href="#optionally-adding-cname-for-jupyterbook-deployment" title="Permalink to this heading">#</a></h3>
+<p>If you plan to deploy the JupyterBook documentation to a custom domain, you’ll need to add a <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> variable to your GitHub repository.</p>
+<ol class="arabic simple">
+<li><p>In your GitHub repository, go to the “Settings” tab and click on “Pages” in the left sidebar.</p></li>
+<li><p>Follow the instructions to configure your custom domain.</p></li>
+<li><p>In your GitHub repository, go to the “Settings” tab and click on “Repository Variables” in the left sidebar.</p></li>
+<li><p>Click the “New repository variable” button.</p></li>
+<li><p>Add a new variable with the key <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> and set the value to your custom domain (e.g., <code class="docutils literal notranslate"><span class="pre">your-custom-domain.com</span></code>).</p></li>
+</ol>
+<p>By adding the <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> variable, the GitHub Pages action in your <code class="docutils literal notranslate"><span class="pre">deploy-docs.yaml</span></code> workflow will properly configure the deployment to use your custom domain.</p>
+<p>With the <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> repository variable properly configured, your project will be set up to handle JupyterBook deployment to your custom domain effectively.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -236,12 +289,12 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="api.html">
+          <a class="next-page" href="examples.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">API Reference</div>
+                <div class="title">HyFI Template Example</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
@@ -274,8 +327,33 @@
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Usage</a><ul>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li><a class="reference internal" href="#managing-actions-secrets-and-variables-in-your-project">Managing Actions Secrets and Variables in Your Project</a><ul>
+<li><a class="reference internal" href="#adding-pypi-api-token-and-test-pypi-api-token">Adding PYPI_API_TOKEN and TEST_PYPI_API_TOKEN</a></li>
+<li><a class="reference internal" href="#optionally-adding-cname-for-jupyterbook-deployment">Optionally Adding CNAME for JupyterBook Deployment</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
