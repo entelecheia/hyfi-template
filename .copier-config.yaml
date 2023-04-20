@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; do NOT edit manually
-_commit: v0.2.5
+_commit: v0.2.6
 _src_path: gh:entelecheia/hyperfast-python-template
 author: Young Joon Lee
 code_template_answers_file: .copier-hyfi-config.yaml
@@ -21,5 +21,5 @@ project_description: HyFI-Template is a ready-to-use GitHub template repository 
 project_license: MIT
 project_name: hyfi-template
 project_short_description: A GitHub Template Repository for HyFI-based Projects
-use_source_code_skeleton: false
+use_source_code_skeleton: true
 
