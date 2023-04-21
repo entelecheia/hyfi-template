@@ -53,7 +53,7 @@ HyFI-Template provides an ideal starting point for developers looking to build p
 
 To begin using HyFI-Template for your project, simply follow these steps:
 
-1. Click the "Use this template" button on the [HyFI-Template GitHub repository](https://github.com/hyfi/hyfi-template) to create a new repository based on the template.
+1. Click the "Use this template" button on the [HyFI-Template GitHub repository](https://github.com/entelecheia/hyfi-template) to create a new repository based on the template.
 2. Clone the newly created repository to your local machine.
 3. Run `make init-project` to initialize the project with the necessary files and configurations.
 4. Follow the provided documentation and guidelines to start building your HyFI-based application.
