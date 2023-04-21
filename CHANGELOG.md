@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.8 (2023-04-21)
+### Fix
+* **task:** Update cli target in init.yaml ([`2a68ef3`](https://github.com/entelecheia/hyfi-template/commit/2a68ef39967864810551f617eb86b0d028be1d47))
+
 ## v0.1.7 (2023-04-21)
 ### Fix
 * **version:** Add pre-commit command to make scm-version ([`e582c4b`](https://github.com/entelecheia/hyfi-template/commit/e582c4bed4413561148651bb0d5ba7fb3fe6ee2a))
