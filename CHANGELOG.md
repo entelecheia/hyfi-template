@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.9 (2023-04-21)
+### Fix
+* **version:** Disable scm-version ([`842b986`](https://github.com/entelecheia/hyfi-template/commit/842b986a612dfd5d47e17db5d82a5292353c9465))
+
 ## v0.1.8 (2023-04-21)
 ### Fix
 * **task:** Update cli target in init.yaml ([`2a68ef3`](https://github.com/entelecheia/hyfi-template/commit/2a68ef39967864810551f617eb86b0d028be1d47))
