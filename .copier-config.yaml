@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; do NOT edit manually
-_commit: v0.2.9
+_commit: v0.2.10
 _src_path: gh:entelecheia/hyperfast-python-template
 author: Young Joon Lee
 code_template_answers_file: .copier-hyfi-config.yaml

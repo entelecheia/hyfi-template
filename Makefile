@@ -201,11 +201,11 @@ remove-template: ## remove the template files (Warning: make sure you don't need
 	@rm -rf .copier.yaml
 
 init-project: install-copier install-precommit-hooks ## initialize the project (Warning: do this only once!)
-	@copier --answers-file .copier-config.yaml --vcs-ref=HEAD gh:entelecheia/hyperfast-python-template .
+	@copier --data 'code_template_source=gh:entelecheia/hyfi-template' --answers-file .copier-config.yaml --vcs-ref=HEAD gh:entelecheia/hyperfast-python-template .
 
 init-git: ## initialize git
 	@git init
 
 reinit-project: install-copier ## reinitialize the project (Warning: this may overwrite existing files!)
-	@copier --answers-file .copier-config.yaml --vcs-ref=HEAD gh:entelecheia/hyperfast-python-template .
+	@copier --skip pyproject.toml --data 'code_template_source=gh:entelecheia/hyfi-template' --answers-file .copier-config.yaml --vcs-ref=HEAD gh:entelecheia/hyperfast-python-template .
 
