@@ -18,14 +18,24 @@ HyFI-Template provides an ideal starting point for developers looking to build p
 
 - **Documentation**: The template repository includes clear instructions and guidelines for getting started with a HyFI-based project, helping developers quickly familiarize themselves with the framework and its features.
 
-## Getting Started
+### Getting Started
 
 To begin using HyFI-Template for your project, simply follow these steps:
 
-1. Click the "Use this template" button on the [HyFI-Template GitHub repository](https://github.com/hyfi/hyfi-template) to create a new repository based on the template.
+1. Click the "Use this template" button on the [HyFI-Template GitHub repository](https://github.com/entelecheia/hyfi-template) to create a new repository based on the template.
 2. Clone the newly created repository to your local machine.
 3. Run `make init-project` to initialize the project with the necessary files and configurations.
 4. Follow the provided documentation and guidelines to start building your HyFI-based application.
+
+Or you can inject the template into an existing repository:
+
+1. From the root of your repository, run the following command:
+
+   ```bash
+   copier --data 'code_template_source=gh:entelecheia/hyfi-template' --answers-file .copier-config.yaml gh:entelecheia/hyperfast-python-template .
+   ```
+
+2. Follow the provided documentation and guidelines to start building your HyFI-based application.
 
 By using HyFI-Template as the foundation for your project, you'll be well on your way to creating powerful and adaptable interfaces for your Python applications.
 

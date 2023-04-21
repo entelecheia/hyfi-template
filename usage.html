@@ -221,17 +221,26 @@
 <li><p><strong>Customizable</strong>: Developers can easily customize the template repository to suit their specific requirements and preferences, tailoring it to the needs of their projects.</p></li>
 <li><p><strong>Documentation</strong>: The template repository includes clear instructions and guidelines for getting started with a HyFI-based project, helping developers quickly familiarize themselves with the framework and its features.</p></li>
 </ul>
-</section>
 <section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<h3>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h3>
 <p>To begin using HyFI-Template for your project, simply follow these steps:</p>
 <ol class="arabic simple">
-<li><p>Click the “Use this template” button on the <a class="reference external" href="https://github.com/hyfi/hyfi-template">HyFI-Template GitHub repository</a> to create a new repository based on the template.</p></li>
+<li><p>Click the “Use this template” button on the <a class="reference external" href="https://github.com/entelecheia/hyfi-template">HyFI-Template GitHub repository</a> to create a new repository based on the template.</p></li>
 <li><p>Clone the newly created repository to your local machine.</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">init-project</span></code> to initialize the project with the necessary files and configurations.</p></li>
 <li><p>Follow the provided documentation and guidelines to start building your HyFI-based application.</p></li>
 </ol>
+<p>Or you can inject the template into an existing repository:</p>
+<ol class="arabic">
+<li><p>From the root of your repository, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>copier<span class="w"> </span>--data<span class="w"> </span><span class="s1">&#39;code_template_source=gh:entelecheia/hyfi-template&#39;</span><span class="w"> </span>--answers-file<span class="w"> </span>.copier-config.yaml<span class="w"> </span>gh:entelecheia/hyperfast-python-template<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+<li><p>Follow the provided documentation and guidelines to start building your HyFI-based application.</p></li>
+</ol>
 <p>By using HyFI-Template as the foundation for your project, you’ll be well on your way to creating powerful and adaptable interfaces for your Python applications.</p>
+</section>
 </section>
 <section id="managing-actions-secrets-and-variables-in-your-project">
 <h2>Managing Actions Secrets and Variables in Your Project<a class="headerlink" href="#managing-actions-secrets-and-variables-in-your-project" title="Permalink to this heading">#</a></h2>
@@ -340,8 +349,10 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Usage</a><ul>
-<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#features">Features</a><ul>
 <li><a class="reference internal" href="#getting-started">Getting Started</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#managing-actions-secrets-and-variables-in-your-project">Managing Actions Secrets and Variables in Your Project</a><ul>
 <li><a class="reference internal" href="#adding-pypi-api-token-and-test-pypi-api-token">Adding PYPI_API_TOKEN and TEST_PYPI_API_TOKEN</a></li>
 <li><a class="reference internal" href="#optionally-adding-cname-for-jupyterbook-deployment">Optionally Adding CNAME for JupyterBook Deployment</a></li>
