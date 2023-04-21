@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.1.6 (2023-04-21)
+### Fix
+* **Makefile:** Update Makefile commands for initializing and reinitializing projects with new template source ([`b38da2b`](https://github.com/entelecheia/hyfi-template/commit/b38da2b4460e02e26e69f25f056153c35d0618cb))
+* Ci triggers, update templates ([`2c24226`](https://github.com/entelecheia/hyfi-template/commit/2c24226dd7562590d32c07043eb880d40477538f))
+
+### Documentation
+* **examples.ipynb:** Update version ([`bb3c308`](https://github.com/entelecheia/hyfi-template/commit/bb3c308f482ef3c4fc7091618d7d7fb4d3dbb8d0))
+
 ## v0.1.5 (2023-04-20)
 ### Fix
 * **book:** Add usage and examples ([`0a9ac32`](https://github.com/entelecheia/hyfi-template/commit/0a9ac322c747d45a0ecc5803537cba96df895ee1))
