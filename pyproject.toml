@@ -4,7 +4,7 @@ version = "0.1.5"
 description = "A GitHub Template Repository for HyFI-based Projects"
 authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
 license = "MIT"
-homepage = "https://entelecheia.github.io/hyfi-template"
+homepage = "https://hyfi-template.entelecheia.ai"
 readme = "README.md"
 packages = [{ include = "hyfi_template", from = "src" }]
 

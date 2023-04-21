@@ -6,7 +6,7 @@ code_template_answers_file: .copier-hyfi-config.yaml
 code_template_source: gh:entelecheia/hyfi-template
 copyright_year: 2023
 documentaion_tool: jupyter-book
-documentation_url: https://entelecheia.github.io/hyfi-template
+documentation_url: https://hyfi-template.entelecheia.ai
 email: entelecheia@hotmail.com
 friendly_name: HyFI-Template
 github_repo_name: hyfi-template

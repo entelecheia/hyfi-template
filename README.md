@@ -17,7 +17,7 @@
 [jupyter-book-image]: https://jupyterbook.org/en/stable/_images/badge.svg
 [repo-url]: https://github.com/entelecheia/hyfi-template
 [pypi-url]: https://pypi.org/project/hyfi-template
-[docs-url]: https://entelecheia.github.io/hyfi-template
+[docs-url]: https://hyfi-template.entelecheia.ai
 [changelog]: https://github.com/entelecheia/hyfi-template/blob/main/CHANGELOG.md
 [contributing guidelines]: https://github.com/entelecheia/hyfi-template/blob/main/CONTRIBUTING.md
 
@@ -25,7 +25,7 @@
 
 A GitHub Template Repository for HyFI-based Projects
 
-- Documentation: [https://entelecheia.github.io/hyfi-template][docs-url]
+- Documentation: [https://hyfi-template.entelecheia.ai][docs-url]
 - GitHub: [https://github.com/entelecheia/hyfi-template][repo-url]
 - PyPI: [https://pypi.org/project/hyfi-template][pypi-url]
 
