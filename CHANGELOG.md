@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.1.7 (2023-04-21)
+### Fix
+* **version:** Add pre-commit command to make scm-version ([`e582c4b`](https://github.com/entelecheia/hyfi-template/commit/e582c4bed4413561148651bb0d5ba7fb3fe6ee2a))
+
+### Documentation
+* Update README ([`81d712d`](https://github.com/entelecheia/hyfi-template/commit/81d712d7b0f0da9cee8c90b8993ac6e0f5c182ee))
+
 ## v0.1.6 (2023-04-21)
 ### Fix
 * **Makefile:** Update Makefile commands for initializing and reinitializing projects with new template source ([`b38da2b`](https://github.com/entelecheia/hyfi-template/commit/b38da2b4460e02e26e69f25f056153c35d0618cb))
