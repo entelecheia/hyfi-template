@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.12 (2023-04-22)
+### Fix
+* **global_config:** Update package configuration file path ([`d7bc08d`](https://github.com/entelecheia/hyfi-template/commit/d7bc08d96e6996e0a30b3dc69b39b0fd6930b7b7))
+
 ## v0.1.11 (2023-04-22)
 ### Fix
 * **init:** Extract package information from HyFI config ([`404b2b6`](https://github.com/entelecheia/hyfi-template/commit/404b2b67e064bc3abc7a60943cf19ba4bb7f4b59))
