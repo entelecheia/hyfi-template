@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.10 (2023-04-22)
+### Fix
+* Init HyFI info ([`4887814`](https://github.com/entelecheia/hyfi-template/commit/4887814bbdc2f8c89d0c4b89a6de2fb1bddbda18))
+
 ## v0.1.9 (2023-04-21)
 ### Fix
 * **version:** Disable scm-version ([`842b986`](https://github.com/entelecheia/hyfi-template/commit/842b986a612dfd5d47e17db5d82a5292353c9465))
