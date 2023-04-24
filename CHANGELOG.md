@@ -1,5 +1,10 @@
 <!--next-version-placeholder-->
 
+## v0.1.14 (2023-04-24)
+### Fix
+* **config:** Remove unused html_theme value in Sphinx configuration file ([`f8f555e`](https://github.com/entelecheia/hyfi-template/commit/f8f555e4229843a37e4100b8f7d300586e02c560))
+* **Makefile:** Remove scm-version ([`d815c9b`](https://github.com/entelecheia/hyfi-template/commit/d815c9be0bbe23d2a6700b56c527a129a8c8a34c))
+
 ## v0.1.13 (2023-04-22)
 ### Fix
 * **config:** Update hyfi package config path in initialization files ([`aca6716`](https://github.com/entelecheia/hyfi-template/commit/aca67162436bf178da354d84dba69f517e1b24ad))
