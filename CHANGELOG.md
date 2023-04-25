@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.1.15 (2023-04-25)
+### Fix
+* Remove setuptools ([`65fdf33`](https://github.com/entelecheia/hyfi-template/commit/65fdf3363a5bb3d5b30d323e0acf1f80e915eb86))
+
 ## v0.1.14 (2023-04-24)
 ### Fix
 * **config:** Remove unused html_theme value in Sphinx configuration file ([`f8f555e`](https://github.com/entelecheia/hyfi-template/commit/f8f555e4229843a37e4100b8f7d300586e02c560))
