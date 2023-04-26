@@ -1,5 +1,10 @@
 <!--next-version-placeholder-->
 
+## v0.1.16 (2023-04-26)
+### Fix
+* **about:** Add _package_name_ field to about Data ([`fa37c2e`](https://github.com/entelecheia/hyfi-template/commit/fa37c2e6048af4e8be313ed06f66621876604b93))
+* Release test workflow ([`a384784`](https://github.com/entelecheia/hyfi-template/commit/a384784d5e2b7300b669ef096f86be70b00c3259))
+
 ## v0.1.15 (2023-04-25)
 ### Fix
 * Remove setuptools ([`65fdf33`](https://github.com/entelecheia/hyfi-template/commit/65fdf3363a5bb3d5b30d323e0acf1f80e915eb86))
