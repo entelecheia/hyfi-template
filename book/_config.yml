@@ -5,10 +5,10 @@
 
 #######################################################################################
 # Book settings
-title: "HyFI-Template" # The title of the book. Will be placed in the left navbar.
-author: <a href="https://entelecheia.me" target="_blank">Young Joon Lee</a>
+title: "HyFI Template" # The title of the book. Will be placed in the left navbar.
+author: "Young Joon Lee" # The author of the book
 copyright: "2023" # Copyright year to be placed in the footer
-logo: https://assets.entelecheia.ai/logo.png
+logo: https://assets.entelecheia.ai/logo.png # logo: Path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -36,12 +36,16 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  favicon: https://assets.entelecheia.ai/favicon.png
   use_issues_button: true
   use_repository_button: true
+  favicon: https://assets.entelecheia.ai/favicon.png # favicon: Path to the favicon image
+  google_analytics_id: G-SY9MF3HBFB # google_analytics_id: Google Analytics ID
 
 sphinx:
   config:
+    html_extra_path: ["assets"]
+    bibtex_reference_style: author_year
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     intersphinx_mapping:
       ebp:
         - "https://executablebooks.org/en/latest/"
@@ -80,3 +84,11 @@ sphinx:
     - sphinx_proof
     - sphinx_examples
     - hoverxref.extension
+    - sphinxcontrib.youtube
+    - sphinxcontrib.video
+    - sphinxcontrib.mermaid
+    - sphinx_thebe
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  thebe: true

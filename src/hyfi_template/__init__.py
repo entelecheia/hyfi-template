@@ -12,7 +12,7 @@ about_data = HyFI.load(about_path)
 
 # Extract package information
 about._package_name_ = about_data.get("_package_name_", "package_name")
-about.name = about_data.get("name", "name")
+about.name = about_data.get("name", "package name")
 about.authors = about_data.get("authors", ["Author name"])
 about.description = about_data.get("description", "package description")
 about.homepage = about_data.get("homepage", "https://package.homepage")
