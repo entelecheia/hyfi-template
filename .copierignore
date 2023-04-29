@@ -1,3 +1,7 @@
 .copierignore
 CHANGELOG.md
 pyproject.toml
+book/usage.md
+book/_toc.yml
+src/hyfi_template/__init__.py
+src/hyfi_template/__cli__.py
