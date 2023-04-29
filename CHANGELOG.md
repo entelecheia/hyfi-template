@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.2.0 (2023-04-29)
+### Feature
+* **project:** Update Copier and templates to v0.4.6 ([`a4d3f44`](https://github.com/entelecheia/hyfi-template/commit/a4d3f445aa1ba955fa5ecb59ad897bd89babbfec))
+
+### Fix
+* Apply updated template ([`94f4b35`](https://github.com/entelecheia/hyfi-template/commit/94f4b356412731896c690d6869277621da03b25e))
+
 ## v0.1.16 (2023-04-26)
 ### Fix
 * **about:** Add _package_name_ field to about Data ([`fa37c2e`](https://github.com/entelecheia/hyfi-template/commit/fa37c2e6048af4e8be313ed06f66621876604b93))
