@@ -1,4 +1,6 @@
 [tool.poe.tasks.add-editable-hyfi]
-cmd = "poetry add --group dev --editable ../hyfi"
+shell = """
+  poetry remove hyfi
+  poetry add --group dev --editable ../hyfi
+"""
 help = "Add hyfi as an editable dependency"
-
