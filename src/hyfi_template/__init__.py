@@ -18,7 +18,6 @@ about.description = about_data.get("description", "package description")
 about.homepage = about_data.get("homepage", "https://package.homepage")
 about.license = about_data.get("license", "MIT")
 about.version = __version__
-global_config.hyfi_package_config_path = "pkg://hyfi_template.conf"
 
 
 def get_version() -> str:

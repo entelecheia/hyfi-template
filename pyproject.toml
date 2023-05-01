@@ -28,6 +28,7 @@ flake8-pyproject = "^1.2.2"
 pytest = "^7.2.1"
 pytest-cov = "^4.0.0"
 hyfi = {path = "../hyfi", develop = true}
+ipykernel = "^6.22.0"
 
 [tool.poe]
 include = [".tasks.toml", ".tasks-extra.toml"]
