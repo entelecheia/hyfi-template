@@ -5,3 +5,5 @@ book/usage.md
 book/_toc.yml
 src/hyfi_template/__init__.py
 src/hyfi_template/__cli__.py
+src/hyfi_template/conf/about/__init__.yaml
+src/hyfi_template/_version.py
