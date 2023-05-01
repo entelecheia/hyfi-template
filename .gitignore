@@ -26,3 +26,6 @@ coverage.xml
 *.cover
 htmlcov/
 pytest-coverage.*
+
+# Misc
+hyfi
