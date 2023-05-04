@@ -3,13 +3,12 @@
 # Importing the libraries
 import sys
 
-from hyfi import hydra_main
+from hyfi import hydra_main, about
 
 
 def main() -> None:
     """Main function for the CLI"""
-    sys.argv.append("--config-path=pkg://hyfi_template.conf")
-    print(sys.argv)
+    sys.argv.append(f"--config-path={about.config_path}")
     hydra_main()
 
 
