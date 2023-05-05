@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hyfi-template"
-version = "0.2.2"
+version = "0.2.3"
 description = "A GitHub Template Repository for HyFI-based Projects"
 authors = ["Young Joon Lee <entelecheia@hotmail.com>"]
 license = "MIT"

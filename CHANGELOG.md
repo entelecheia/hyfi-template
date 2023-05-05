@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.2.3 (2023-05-05)
+### Fix
+* **about:** Update package info and descriptions ([`1ee172a`](https://github.com/entelecheia/hyfi-template/commit/1ee172a8909f40a3eb1ccdad4d4945dd5399440e))
+
 ## v0.2.2 (2023-05-05)
 ### Fix
 * Update poetry lock ([`51ced3c`](https://github.com/entelecheia/hyfi-template/commit/51ced3c0cf8121e49d1b607b6aa194d12af4e7e9))
