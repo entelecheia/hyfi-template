@@ -8,7 +8,6 @@ from hyfi import hydra_main, about
 
 def main() -> None:
     """Main function for the CLI"""
-    print(about.config_path)
     sys.argv.append(f"--config-path={about.config_path}")
     hydra_main()
 
