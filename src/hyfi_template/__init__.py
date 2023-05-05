@@ -5,10 +5,10 @@ from hyfi import HyFI, about, global_config
 from ._version import __version__
 
 # Read the package name from the current directory
-_package_name_ = os.path.basename(os.path.dirname(__file__))
+__package_name__ = os.path.basename(os.path.dirname(__file__))
 
 # Extract package information
-about._package_name_ = _package_name_
+about.__package_name__ = __package_name__
 
 
 def get_version() -> str:
