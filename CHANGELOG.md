@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.2.4 (2023-05-05)
+### Fix
+* **cli:** Reorder imports in hyfi_template/__cli__.py and .copier-template/src/{{package_name}}/__cli__.py.jinja ([`c3d9e15`](https://github.com/entelecheia/hyfi-template/commit/c3d9e154ce1a9fb19651f08571e4e9d142485456))
+
 ## v0.2.3 (2023-05-05)
 ### Fix
 * **about:** Update package info and descriptions ([`1ee172a`](https://github.com/entelecheia/hyfi-template/commit/1ee172a8909f40a3eb1ccdad4d4945dd5399440e))
