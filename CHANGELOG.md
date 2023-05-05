@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.2.1 (2023-05-05)
+### Fix
+* Apply updated template ([`c3a68f5`](https://github.com/entelecheia/hyfi-template/commit/c3a68f559c0cde46d1dd74886ae0ce18822e9e3e))
+* Apply updated template ([`2ec12fb`](https://github.com/entelecheia/hyfi-template/commit/2ec12fbeb5b45f2d9663d014394b04686b99b355))
+* Apply updated template ([`20e7923`](https://github.com/entelecheia/hyfi-template/commit/20e79232c29b08309c60d8daf3f1b9e440ab39a2))
+* How to pass config_path argument ([`29a491a`](https://github.com/entelecheia/hyfi-template/commit/29a491a712259b34150877ed2ad67204ece7064e))
+
 ## v0.2.0 (2023-04-29)
 ### Feature
 * **project:** Update Copier and templates to v0.4.6 ([`a4d3f44`](https://github.com/entelecheia/hyfi-template/commit/a4d3f445aa1ba955fa5ecb59ad897bd89babbfec))
