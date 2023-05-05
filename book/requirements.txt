@@ -1,7 +1,5 @@
 jupyter-book
 docutils==0.17.1
-matplotlib
-numpy
 sphinx-inline-tabs
 sphinx-examples
 sphinx-proof
@@ -10,3 +8,4 @@ sphinxcontrib-youtube
 sphinxcontrib-video
 sphinx-thebe
 sphinxcontrib-mermaid
+sphinx-carousel
