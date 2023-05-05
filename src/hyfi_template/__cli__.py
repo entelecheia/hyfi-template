@@ -3,7 +3,7 @@
 # Importing the libraries
 import sys
 
-from hyfi import hydra_main, about
+from hyfi import about, hydra_main
 
 
 def main() -> None:
