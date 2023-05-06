@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.1 (2023-05-06)
+### Fix
+* **config:** Use cmd instead of shell in .tasks-extra.toml.jinja ([`2e293c1`](https://github.com/entelecheia/hyfi-template/commit/2e293c11d2d0d10929625c80abeb204541f66125))
+
 ## v0.3.0 (2023-05-06)
 ### Feature
 * **tasks:** Add hyfi tasks ([`9b52f1c`](https://github.com/entelecheia/hyfi-template/commit/9b52f1c28967d19ab0fda5227d99f18a40e9ca60))
