@@ -7,9 +7,9 @@ help = "Add hyfi as an editable dependency"
 
 [tool.poe.tasks.copy-hyfi-conf]
 shell = """
-  hyfi cmd=cpcfg copier.dst_path=src/hyfi_template/conf copier.exclude='**/*/about/__init__.yaml'
+  hyfi cmd=cpcfg copier.dst_path=src/{{package_name}}/conf copier.exclude='**/*/about/__init__.yaml'
 """
-help = "Copy hyfi conf to src/hyfi_template/conf"
+help = "Copy hyfi conf to src/{{package_name}}/conf"
 
 [tool.poe.tasks.run-hyfi-template]
 shell = """
