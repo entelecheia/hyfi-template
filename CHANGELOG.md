@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.2 (2023-05-06)
+### Fix
+* **tasks:** Rename run-hyfi-template to apply-hyfi-template ([`159d81a`](https://github.com/entelecheia/hyfi-template/commit/159d81a3bcc645873437ae7556897b2c6d00f118))
+
 ## v0.3.1 (2023-05-06)
 ### Fix
 * **config:** Use cmd instead of shell in .tasks-extra.toml.jinja ([`2e293c1`](https://github.com/entelecheia/hyfi-template/commit/2e293c11d2d0d10929625c80abeb204541f66125))
