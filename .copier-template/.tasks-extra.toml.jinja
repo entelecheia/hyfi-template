@@ -12,7 +12,8 @@ shell = """
 help = "Copy hyfi conf to src/{{package_name}}/conf"
 
 [tool.poe.tasks.run-hyfi-template]
-shell = """
+cmd = """
   copier --answers-file .copier-hyfi-config.yaml gh:entelecheia/hyfi-template .
 """
+use_exec = true
 help = "Run hyfi template"
