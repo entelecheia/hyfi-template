@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.3.0 (2023-05-06)
+### Feature
+* **tasks:** Add hyfi tasks ([`9b52f1c`](https://github.com/entelecheia/hyfi-template/commit/9b52f1c28967d19ab0fda5227d99f18a40e9ca60))
+
+### Fix
+* **workflows:** Fix pytest-coverage file path ([`924b0dc`](https://github.com/entelecheia/hyfi-template/commit/924b0dc45b1bfe6b0313bde3a2e9c3bf12a96caf))
+
 ## v0.2.4 (2023-05-05)
 ### Fix
 * **cli:** Reorder imports in hyfi_template/__cli__.py and .copier-template/src/{{package_name}}/__cli__.py.jinja ([`c3d9e15`](https://github.com/entelecheia/hyfi-template/commit/c3d9e154ce1a9fb19651f08571e4e9d142485456))
