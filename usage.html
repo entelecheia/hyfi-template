@@ -85,8 +85,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="https://unpkg.com/mermaid@9.4.0/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'usage';</script>
     <link rel="shortcut icon" href="https://assets.entelecheia.ai/favicon.png"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -442,7 +440,7 @@ document.write(`
 <p>Or you can inject the template into an existing repository:</p>
 <ol class="arabic">
 <li><p>From the root of your repository, run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>copier<span class="w"> </span>--data<span class="w"> </span><span class="s1">&#39;code_template_source=gh:entelecheia/hyfi-template&#39;</span><span class="w"> </span>--answers-file<span class="w"> </span>.copier-config.yaml<span class="w"> </span>gh:entelecheia/hyperfast-python-template<span class="w"> </span>.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>copier<span class="w"> </span>copy<span class="w"> </span>--UNSAFE<span class="w"> </span>--data<span class="w"> </span><span class="s1">&#39;code_template_source=gh:entelecheia/hyfi-template&#39;</span><span class="w"> </span>--answers-file<span class="w"> </span>.copier-config.yaml<span class="w"> </span>gh:entelecheia/hyperfast-python-template<span class="w"> </span>.
 </pre></div>
 </div>
 </li>
