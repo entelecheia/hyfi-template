@@ -32,7 +32,7 @@ Or you can inject the template into an existing repository:
 1. From the root of your repository, run the following command:
 
    ```bash
-   copier --data 'code_template_source=gh:entelecheia/hyfi-template' --answers-file .copier-config.yaml gh:entelecheia/hyperfast-python-template .
+   copier copy --UNSAFE --data 'code_template_source=gh:entelecheia/hyfi-template' --answers-file .copier-config.yaml gh:entelecheia/hyperfast-python-template .
    ```
 
 2. Follow the provided documentation and guidelines to start building your HyFI-based application.
