@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.4 (2023-06-11)
+### Fix
+* Apply the latest template ([`0b858e5`](https://github.com/entelecheia/hyfi-template/commit/0b858e503701e270e72ded342303aa5d73b050cf))
+
 ## v0.3.3 (2023-06-06)
 ### Fix
 * **copier:** Add --UNSAFE flag to copier copy command ([`5656055`](https://github.com/entelecheia/hyfi-template/commit/56560556782f37511858320af617e58d530a72fa))
