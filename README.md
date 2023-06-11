@@ -5,6 +5,7 @@
 [![release-date-image]][release-url]
 [![license-image]][license-url]
 [![jupyter-book-image]][docs-url]
+[![codecov][codecov-image]][codecov-url]
 
 <!-- Links: -->
 [pypi-image]: https://img.shields.io/pypi/v/hyfi-template
@@ -14,6 +15,8 @@
 [release-date-image]: https://img.shields.io/github/release-date/entelecheia/hyfi-template
 [release-url]: https://github.com/entelecheia/hyfi-template/releases
 [jupyter-book-image]: https://jupyterbook.org/en/stable/_images/badge.svg
+[codecov-image]: https://codecov.io/gh/entelecheia/hyfi-template/branch/master/graph/badge.svg?token=CEUCMPZM9F
+[codecov-url]: https://codecov.io/gh/entelecheia/hyfi-template
 
 [repo-url]: https://github.com/entelecheia/hyfi-template
 [pypi-url]: https://pypi.org/project/hyfi-template
