@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.5 (2023-06-12)
+### Fix
+* **task:** Upgrade hyfi and update hyfi conf copying task ([`7ab9830`](https://github.com/entelecheia/hyfi-template/commit/7ab9830753c53f29dee122f30dae4db05253c493))
+
 ## v0.3.4 (2023-06-11)
 ### Fix
 * Apply the latest template ([`0b858e5`](https://github.com/entelecheia/hyfi-template/commit/0b858e503701e270e72ded342303aa5d73b050cf))
