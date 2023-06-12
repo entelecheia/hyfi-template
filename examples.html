@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Examples &#8212; HyFI Template</title>
+    <title>HyFI Template Example &#8212; HyFI Template</title>
   
   
   
@@ -182,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">HyFI Template Example</a></li>
 </ul>
 
     </div>
@@ -303,7 +303,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/entelecheia/hyfi-template/edit/main/book/examples.md" target="_blank"
+      <li><a href="https://github.com/entelecheia/hyfi-template/edit/main/book/examples.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,23 +351,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       <li><a href="_sources/examples.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="_sources/examples.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +360,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -449,7 +432,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Examples</h1>
+    <h1>HyFI Template Example</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -459,8 +442,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-version">Check Version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-workspace">Initialize Workspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-configuration">Compose Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-configuration">Display Configuration</a></li>
 </ul>
             </nav>
         </div>
@@ -472,331 +457,123 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
-<p>This page contains a few examples of how you can use HyFI Template package.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<p>You can install HyFI Template using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="hyfi-template-example">
+<h1>HyFI Template Example<a class="headerlink" href="#hyfi-template-example" title="Permalink to this heading">#</a></h1>
+<p>This Jupyter Notebook demonstrates the usage of the <code class="docutils literal notranslate"><span class="pre">hyfi_template</span></code> package, including initializing a workspace, mounting Google Drive on Colab, and using HyFI to manage configurations.</p>
+<p>First, let’s import the necessary functions and classes from the <code class="docutils literal notranslate"><span class="pre">hyfi_template</span></code> package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">hyfi</span><span class="o">-</span><span class="n">template</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hyfi_template</span> <span class="kn">import</span> <span class="n">get_version</span><span class="p">,</span> <span class="n">HyFI</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting hyfi-template
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/yj.lee/.venvs/hyfi-template/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading hyfi_template-0.3.4-py3-none-any.whl (11 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting hyfi[all]&lt;0.5.0,&gt;=0.4.0 (from hyfi-template)
-  Downloading hyfi-0.4.0-py3-none-any.whl (84 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/84.0 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">84.0/84.0 kB</span> <span class=" -Color -Color-Red">3.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h<span class=" -Color -Color-Yellow">WARNING: hyfi 0.4.0 does not provide the extra &#39;all&#39;</span>
-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting chardet&lt;=5.1.0 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading chardet-5.1.0-py3-none-any.whl (199 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/199.1 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">199.1/199.1 kB</span> <span class=" -Color -Color-Red">9.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting colorama&lt;0.5.0,&gt;=0.4.3 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting filelock&lt;3.10,&gt;=3.4 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading filelock-3.9.1-py3-none-any.whl (9.7 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting gdown&lt;=4.6.6 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading gdown-4.6.6-py3-none-any.whl (14 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting huggingface-hub&lt;0.13.0,&gt;=0.8.1 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading huggingface_hub-0.12.1-py3-none-any.whl (190 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/190.3 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">190.3/190.3 kB</span> <span class=" -Color -Color-Red">9.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting hydra-colorlog&lt;2.0.0,&gt;=1.2.0 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading hydra_colorlog-1.2.0-py3-none-any.whl (3.6 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting hydra-core&lt;2.0.0,&gt;=1.3.2 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading hydra_core-1.3.2-py3-none-any.whl (154 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/154.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">154.5/154.5 kB</span> <span class=" -Color -Color-Red">10.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting matplotlib&lt;4.0.0,&gt;=3.7.1 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading matplotlib-3.7.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/11.6 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.6/11.6 MB</span> <span class=" -Color -Color-Red">17.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.3/11.6 MB</span> <span class=" -Color -Color-Red">18.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.3/11.6 MB</span> <span class=" -Color -Color-Red">22.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.7/11.6 MB</span> <span class=" -Color -Color-Red">26.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.6/11.6 MB</span> <span class=" -Color -Color-Red">32.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.0/11.6 MB</span> <span class=" -Color -Color-Red">38.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ <span class=" -Color -Color-Green">8.4/11.6 MB</span> <span class=" -Color -Color-Red">34.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">11.6/11.6 MB</span> <span class=" -Color -Color-Red">50.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">11.6/11.6 MB</span> <span class=" -Color -Color-Red">43.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting numpy&lt;1.24 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading numpy-1.23.5-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/17.1 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.6/17.1 MB</span> <span class=" -Color -Color-Red">138.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">10.8/17.1 MB</span> <span class=" -Color -Color-Red">155.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">17.0/17.1 MB</span> <span class=" -Color -Color-Red">205.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">17.0/17.1 MB</span> <span class=" -Color -Color-Red">205.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">17.1/17.1 MB</span> <span class=" -Color -Color-Red">104.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pandas&lt;2.0.0,&gt;=1.5.3 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading pandas-1.5.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.0 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.0 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.8/12.0 MB</span> <span class=" -Color -Color-Red">175.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">12.0/12.0 MB</span> <span class=" -Color -Color-Red">197.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.0/12.0 MB</span> <span class=" -Color -Color-Red">120.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pathspec&gt;=0.9.0 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading pathspec-0.11.1-py3-none-any.whl (29 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pydantic&lt;2.0.0,&gt;=1.10.7 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading pydantic-1.10.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/3.1 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.1/3.1 MB</span> <span class=" -Color -Color-Red">141.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting python-dotenv&lt;2.0.0,&gt;=1.0.0 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests&lt;3.0.0,&gt;=2.27.1 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2.31.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting rich&lt;14.0,&gt;=12.1 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading rich-13.4.1-py3-none-any.whl (239 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/239.4 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">239.4/239.4 kB</span> <span class=" -Color -Color-Red">74.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting scipy&lt;2.0.0,&gt;=1.10.1 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading scipy-1.10.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.1 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/34.1 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.6/34.1 MB</span> <span class=" -Color -Color-Red">259.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">15.1/34.1 MB</span> <span class=" -Color -Color-Red">206.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ <span class=" -Color -Color-Green">23.3/34.1 MB</span> <span class=" -Color -Color-Red">233.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">32.8/34.1 MB</span> <span class=" -Color -Color-Red">238.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">34.1/34.1 MB</span> <span class=" -Color -Color-Red">246.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">34.1/34.1 MB</span> <span class=" -Color -Color-Red">246.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">34.1/34.1 MB</span> <span class=" -Color -Color-Red">79.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting tqdm&lt;5.0.0,&gt;=4.64.1 (from hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading tqdm-4.65.0-py3-none-any.whl (77 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/77.1 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">77.1/77.1 kB</span> <span class=" -Color -Color-Red">27.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from gdown&lt;=4.6.6-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (1.16.0)
-Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from gdown&lt;=4.6.6-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (4.12.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyyaml&gt;=5.1 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from huggingface-hub&lt;0.13.0,&gt;=0.8.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (6.0)
-Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from huggingface-hub&lt;0.13.0,&gt;=0.8.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (4.6.3)
-Requirement already satisfied: packaging&gt;=20.9 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from huggingface-hub&lt;0.13.0,&gt;=0.8.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (23.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting colorlog (from hydra-colorlog&lt;2.0.0,&gt;=1.2.0-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading colorlog-6.7.0-py2.py3-none-any.whl (11 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting omegaconf&lt;2.4,&gt;=2.2 (from hydra-core&lt;2.0.0,&gt;=1.3.2-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading omegaconf-2.3.0-py3-none-any.whl (79 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/79.5 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">79.5/79.5 kB</span> <span class=" -Color -Color-Red">26.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hCollecting antlr4-python3-runtime==4.9.* (from hydra-core&lt;2.0.0,&gt;=1.3.2-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading antlr4-python3-runtime-4.9.3.tar.gz (117 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/117.0 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">117.0/117.0 kB</span> <span class=" -Color -Color-Red">49.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hCollecting contourpy&gt;=1.0.1 (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading contourpy-1.0.7-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (299 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/300.0 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">300.0/300.0 kB</span> <span class=" -Color -Color-Red">81.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cycler&gt;=0.10 (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading cycler-0.11.0-py3-none-any.whl (6.4 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fonttools&gt;=4.22.0 (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading fonttools-4.39.4-py3-none-any.whl (1.0 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.0 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/1.0 MB</span> <span class=" -Color -Color-Red">114.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting kiwisolver&gt;=1.0.1 (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading kiwisolver-1.4.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.4 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/1.4 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+<section id="check-version">
+<h2>Check Version<a class="headerlink" href="#check-version" title="Permalink to this heading">#</a></h2>
+<p>Now, let’s get the version of the <code class="docutils literal notranslate"><span class="pre">hyfi_template</span></code> package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">version</span> <span class="o">=</span> <span class="n">get_version</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HyFI Template version:&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.4/1.4 MB</span> <span class=" -Color -Color-Red">137.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pillow&gt;=6.2.0 (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading Pillow-9.5.0-cp311-cp311-manylinux_2_28_x86_64.whl (3.4 MB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/3.4 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.4/3.4 MB</span> <span class=" -Color -Color-Red">144.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pyparsing&gt;=2.3.1 (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/98.3 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">98.3/98.3 kB</span> <span class=" -Color -Color-Red">40.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hRequirement already satisfied: python-dateutil&gt;=2.7 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2.8.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pytz&gt;=2020.1 (from pandas&lt;2.0.0,&gt;=1.5.3-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading pytz-2023.3-py2.py3-none-any.whl (502 kB)
-?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/502.3 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">502.3/502.3 kB</span> <span class=" -Color -Color-Red">102.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (3.1.0)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (3.4)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2.0.3)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2023.5.7)
-Requirement already satisfied: markdown-it-py&lt;3.0.0,&gt;=2.2.0 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from rich&lt;14.0,&gt;=12.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2.2.0)
-Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from rich&lt;14.0,&gt;=12.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2.15.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mdurl~=0.1 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from markdown-it-py&lt;3.0.0,&gt;=2.2.0-&gt;rich&lt;14.0,&gt;=12.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (0.1.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.11.3/x64/lib/python3.11/site-packages (from beautifulsoup4-&gt;gdown&lt;=4.6.6-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template) (2.4.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting PySocks!=1.5.7,&gt;=1.5.6 (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi[all]&lt;0.5.0,&gt;=0.4.0-&gt;hyfi-template)
-  Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: antlr4-python3-runtime
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for antlr4-python3-runtime (setup.py) ... ?25l-
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> \
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> |
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> /
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for antlr4-python3-runtime: filename=antlr4_python3_runtime-4.9.3-py3-none-any.whl size=144554 sha256=b5cec91d0b6c74781ca039938662234bbbf87c2a05e5c556f3eca719f1431383
-  Stored in directory: /home/runner/.cache/pip/wheels/1a/97/32/461f837398029ad76911109f07047fde1d7b661a147c7c56d1
-Successfully built antlr4-python3-runtime
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: pytz, antlr4-python3-runtime, tqdm, python-dotenv, PySocks, pyparsing, pydantic, pillow, pathspec, omegaconf, numpy, kiwisolver, fonttools, filelock, cycler, colorlog, colorama, chardet, scipy, rich, pandas, hydra-core, huggingface-hub, contourpy, matplotlib, hydra-colorlog, gdown, hyfi, hyfi-template
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed PySocks-1.7.1 antlr4-python3-runtime-4.9.3 chardet-5.1.0 colorama-0.4.6 colorlog-6.7.0 contourpy-1.0.7 cycler-0.11.0 filelock-3.9.1 fonttools-4.39.4 gdown-4.6.6 huggingface-hub-0.12.1 hydra-colorlog-1.2.0 hydra-core-1.3.2 hyfi-0.4.0 hyfi-template-0.3.4 kiwisolver-1.4.4 matplotlib-3.7.1 numpy-1.23.5 omegaconf-2.3.0 pandas-1.5.3 pathspec-0.11.1 pillow-9.5.0 pydantic-1.10.9 pyparsing-3.0.9 python-dotenv-1.0.0 pytz-2023.3 rich-13.4.1 scipy-1.10.1 tqdm-4.65.0
-</pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.3.4
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hyfi_template</span> <span class="kn">import</span> <span class="n">get_version</span>
+<section id="initialize-workspace">
+<h2>Initialize Workspace<a class="headerlink" href="#initialize-workspace" title="Permalink to this heading">#</a></h2>
+<p>We’ll initialize the workspace using the <code class="docutils literal notranslate"><span class="pre">HyFI.init_workspace</span></code> function. The function takes the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">workspace</span></code>: The root workspace directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code>: The project subdirectory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task</span></code>: The specific task within the project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_level</span></code>: Logging level for the workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Whether to print verbose messages.</p></li>
+</ul>
+<p>We’ll check if we’re running in Google Colab, and if so, we’ll mount Google Drive.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
+    <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">get_version</span><span class="p">())</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_workspace</span><span class="p">(</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;hyfi-template&quot;</span><span class="p">,</span>
+    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_data_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_data_dir</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.notebook:Extension autotime not found. Install it first.
+INFO:hyfi.env:config_module: hyfi_template.conf
+INFO:hyfi.env:compose config with overrides: [&#39;+project=__init__&#39;]
+INFO:hyfi.env:initialized batcher with &lt;hyfi.utils.batch.batcher.Batcher object at 0x7f1a14d94640&gt;
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template
+project_data_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compose-configuration">
+<h2>Compose Configuration<a class="headerlink" href="#compose-configuration" title="Permalink to this heading">#</a></h2>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">HyFI.compose</span></code> function to load a configuration file. In this example, we’ll use the default configuration by specifying <code class="docutils literal notranslate"><span class="pre">path=__default__</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;path=__default__&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.env:config_module: hyfi.conf
+INFO:hyfi.env:compose config with overrides: [&#39;+path=__default__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="display-configuration">
+<h2>Display Configuration<a class="headerlink" href="#display-configuration" title="Permalink to this heading">#</a></h2>
+<p>Now, let’s print the loaded configuration using the <code class="docutils literal notranslate"><span class="pre">HyFI.print</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HyFI</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;cache_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/cache&#39;,
+ &#39;data_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/data&#39;,
+ &#39;library_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/libs&#39;,
+ &#39;log_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/logs&#39;,
+ &#39;model_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/models&#39;,
+ &#39;output_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/outputs&#39;,
+ &#39;task_name&#39;: &#39;default-task&#39;,
+ &#39;task_root&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task&#39;,
+ &#39;tmp_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/tmp&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s it! This example demonstrated the basic usage of the <code class="docutils literal notranslate"><span class="pre">hyfi_template</span></code> package. You can now use this package to manage your own projects and tasks in a structured manner.</p>
 </section>
 </section>
 
@@ -858,8 +635,10 @@ Successfully built antlr4-python3-runtime
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-version">Check Version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-workspace">Initialize Workspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-configuration">Compose Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-configuration">Display Configuration</a></li>
 </ul>
   </nav></div>
 
