@@ -15,7 +15,7 @@
 [release-date-image]: https://img.shields.io/github/release-date/entelecheia/hyfi-template
 [release-url]: https://github.com/entelecheia/hyfi-template/releases
 [jupyter-book-image]: https://jupyterbook.org/en/stable/_images/badge.svg
-[codecov-image]: https://codecov.io/gh/entelecheia/hyfi-template/branch/master/graph/badge.svg?token=CEUCMPZM9F
+[codecov-image]: https://codecov.io/gh/entelecheia/hyfi-template/branch/main/graph/badge.svg?token=CEUCMPZM9F
 [codecov-url]: https://codecov.io/gh/entelecheia/hyfi-template
 
 [repo-url]: https://github.com/entelecheia/hyfi-template
