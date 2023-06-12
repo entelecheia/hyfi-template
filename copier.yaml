@@ -15,7 +15,7 @@ _answers_file: .copier-hyfi-config.yaml
 
 _tasks:
   # Strings get executed under system's default shell
-  - "poetry add hyfi"
+  - "poetry add hyfi@latest"
   - "poetry run hyfi cmd=cpcfg copier.dst_path=src/{{package_name}}/conf copier.exclude='**/*/about/__init__.yaml'"
 
 # questions
