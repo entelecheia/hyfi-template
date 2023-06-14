@@ -15,8 +15,7 @@ _answers_file: .copier-hyfi-config.yaml
 
 _tasks:
   # Strings get executed under system's default shell
-  - "command -v poe &> /dev/null || pipx install poethepoet || pip install --user poetry"
-  - "poe copy-hyfi-config"
+  - "WORKON_HOME=${WORKON_HOME:-$HOME/.venvs} && python3 -m venv $WORKON_HOME/{{project_name}} && . $WORKON_HOME/{{project_name}}/bin/activate && pip install --upgrade pip setuptools wheel && poetry add hyfi@latest && poetry run hyfi cmd=copy_conf copier.dst_path=src/{{package_name}}/conf copier.exclude='**/*/about/__init__.yaml'"
 
 # questions
 package_name:
