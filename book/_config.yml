@@ -70,7 +70,7 @@ sphinx:
         - "https://sphinx-proof.readthedocs.io/en/latest/"
         - null
     hoverxref_intersphinx:
-     - "sphinxproof"
+      - "sphinxproof"
     mathjax3_config:
       tex:
         macros:
@@ -78,9 +78,15 @@ sphinx:
           "floor": ["\\lfloor#1\\rfloor", 1]
           "bmat": ["\\left[\\begin{array}"]
           "emat": ["\\end{array}\\right]"]
+    add_module_names: false
+    autosummary_generate: true
 
   extra_extensions:
     - sphinx.ext.intersphinx
+    - sphinx.ext.autodoc
+    - sphinx.ext.autosummary
+    - sphinx.ext.napoleon
+    - sphinx.ext.viewcode
     - sphinx_inline_tabs
     - sphinx_proof
     - sphinx_examples
@@ -90,6 +96,7 @@ sphinx:
     - sphinxcontrib.mermaid
     - sphinx_thebe
     - sphinx_carousel.carousel
+    - sphinxcontrib.lastupdate
 
 launch_buttons:
   colab_url: "https://colab.research.google.com"
