@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.3.6 (2023-06-14)
+### Fix
+* **dependencies:** Update poe and use it to copy hyfi config ([`123378d`](https://github.com/entelecheia/hyfi-template/commit/123378d7bac288f73cfe749a4c4f2f18bbeeabe8))
+* **poe:** Rename update-hyfi-config to copy-hyfi-config, update paths and add overwrite flag ([`048353c`](https://github.com/entelecheia/hyfi-template/commit/048353ce510189c32f0778b2822482464a81616e))
+* **book:** Update codecov URL to point to main branch ([`faedf0c`](https://github.com/entelecheia/hyfi-template/commit/faedf0c97b53ea6acb6c39b9cd990987c269b991))
+
 ## v0.3.5 (2023-06-12)
 ### Fix
 * **task:** Upgrade hyfi and update hyfi conf copying task ([`7ab9830`](https://github.com/entelecheia/hyfi-template/commit/7ab9830753c53f29dee122f30dae4db05253c493))
