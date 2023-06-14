@@ -12,7 +12,7 @@ cmd = """
 use_exec = true
 help = "Apply hyfi template"
 
-[tool.poe.tasks.update-hyfi-config]
+[tool.poe.tasks.copy-hyfi-config]
 shell = """
   poetry add hyfi@latest
   poetry run hyfi cmd=copy_conf copier.dst_path=src/hyfi_template/conf copier.exclude='**/*/about/__init__.yaml'
