@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.8 (2023-06-14)
+### Fix
+* **copier:** Add project_name question to copier.yaml ([`b719a30`](https://github.com/entelecheia/hyfi-template/commit/b719a30225a77febc74cb9c0bd6c6e805226c6a2))
+
 ## v0.3.7 (2023-06-14)
 ### Fix
 * **dependencies:** Upgrade Copier to use hyfi@latest and new file path  for copying configuration files ([`07bab74`](https://github.com/entelecheia/hyfi-template/commit/07bab74111de037bc20000e77fb6e5c43b521a9e))
