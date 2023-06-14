@@ -1,5 +1,10 @@
 <!--next-version-placeholder-->
 
+## v0.3.7 (2023-06-14)
+### Fix
+* **dependencies:** Upgrade Copier to use hyfi@latest and new file path  for copying configuration files ([`07bab74`](https://github.com/entelecheia/hyfi-template/commit/07bab74111de037bc20000e77fb6e5c43b521a9e))
+* **deps:** Upgrade hyfi to latest version, add copier.overwite=True flag ([`a739385`](https://github.com/entelecheia/hyfi-template/commit/a739385bb2b45597037267f2d71d357271f954ff))
+
 ## v0.3.6 (2023-06-14)
 ### Fix
 * **dependencies:** Update poe and use it to copy hyfi config ([`123378d`](https://github.com/entelecheia/hyfi-template/commit/123378d7bac288f73cfe749a4c4f2f18bbeeabe8))
