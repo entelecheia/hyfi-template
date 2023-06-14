@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.9 (2023-06-14)
+### Fix
+* **hyfi:** Fix typo in command causing file overwrite error ([`26bb9ec`](https://github.com/entelecheia/hyfi-template/commit/26bb9ec521df849691992051424adcad5b76ff1a))
+
 ## v0.3.8 (2023-06-14)
 ### Fix
 * **copier:** Add project_name question to copier.yaml ([`b719a30`](https://github.com/entelecheia/hyfi-template/commit/b719a30225a77febc74cb9c0bd6c6e805226c6a2))
