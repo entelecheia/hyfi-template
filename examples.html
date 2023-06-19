@@ -485,7 +485,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.3.4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.3.9
 </pre></div>
 </div>
 </div>
@@ -508,26 +508,30 @@ document.write(`
     <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
 <span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_workspace</span><span class="p">(</span>
-    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;hyfi-template&quot;</span><span class="p">,</span>
-    <span class="n">task</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;hyfi-template&quot;</span><span class="p">,</span>
+    <span class="n">task_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
     <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_data_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_data_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.notebook:Extension autotime not found. Install it first.
-INFO:hyfi.env:config_module: hyfi_template.conf
-INFO:hyfi.env:compose config with overrides: [&#39;+project=__init__&#39;]
-INFO:hyfi.env:initialized batcher with &lt;hyfi.utils.batch.batcher.Batcher object at 0x7f1a14d94640&gt;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template
-project_data_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.hydra:Initializing `JobLibConfig` class with `__init__` config in `joblib` group.
+INFO:hyfi.hydra:Initializing `PathConfig` class with `__init__` config in `path` group.
+INFO:hyfi.hydra:Initializing `ProjectConfig` class with `__init__` config in `project` group.
+INFO:hyfi.hydra:Initializing `PathConfig` class with `__init__` config in `path` group.
+INFO:hyfi.hydra:Initializing `JobLibConfig` class with `__init__` config in `joblib` group.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi-template
+project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi-template/workspace
 </pre></div>
 </div>
 </div>
@@ -538,13 +542,7 @@ project_data_dir: /mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/wo
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">HyFI.compose</span></code> function to load a configuration file. In this example, we’ll use the default configuration by specifying <code class="docutils literal notranslate"><span class="pre">path=__default__</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;path=__default__&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.env:config_module: hyfi.conf
-INFO:hyfi.env:compose config with overrides: [&#39;+path=__default__&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;path=__batch__&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -560,15 +558,15 @@ INFO:hyfi.env:compose config with overrides: [&#39;+path=__default__&#39;]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;cache_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/cache&#39;,
- &#39;data_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/data&#39;,
- &#39;library_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/libs&#39;,
- &#39;log_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/logs&#39;,
- &#39;model_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/models&#39;,
- &#39;output_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/outputs&#39;,
- &#39;task_name&#39;: &#39;default-task&#39;,
- &#39;task_root&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task&#39;,
- &#39;tmp_dir&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/workspace/default-task/tmp&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;batch_outputs&#39;: &#39;./tmp/outputs/batch-outputs&#39;,
+ &#39;task_cache&#39;: &#39;./tmp/cache&#39;,
+ &#39;task_datasets&#39;: &#39;./tmp/datasets&#39;,
+ &#39;task_library&#39;: &#39;./tmp/libs&#39;,
+ &#39;task_log&#39;: &#39;./tmp/logs&#39;,
+ &#39;task_models&#39;: &#39;./tmp/models&#39;,
+ &#39;task_outputs&#39;: &#39;./tmp/outputs&#39;,
+ &#39;task_root&#39;: &#39;./tmp&#39;,
+ &#39;task_tmp&#39;: &#39;./tmp/tmp&#39;}
 </pre></div>
 </div>
 </div>
