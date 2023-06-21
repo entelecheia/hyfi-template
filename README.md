@@ -4,8 +4,8 @@
 [![version-image]][release-url]
 [![release-date-image]][release-url]
 [![license-image]][license-url]
-[![jupyter-book-image]][docs-url]
 [![codecov][codecov-image]][codecov-url]
+[![jupyter-book-image]][docs-url]
 
 <!-- Links: -->
 [codecov-image]: https://codecov.io/gh/entelecheia/hyfi-template/branch/main/graph/badge.svg?token=CEUCMPZM9F
