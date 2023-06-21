@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.11 (2023-06-21)
+### Fix
+* **template:** Apply the latest template to itself ([`44281e2`](https://github.com/entelecheia/hyfi-template/commit/44281e2941220fb81b3b137f3e3ae63ef023b28f))
+
 ## v0.3.10 (2023-06-19)
 ### Fix
 * **dependencies:** Upgrade hyfi to version 0.8.1 ([`ea8d95d`](https://github.com/entelecheia/hyfi-template/commit/ea8d95d33f3bbb63510c9fbcdf8e123ae242b1f1))
