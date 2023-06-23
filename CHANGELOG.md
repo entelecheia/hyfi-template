@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.12 (2023-06-23)
+### Fix
+* **notebook:** Remove unused execution counts and cell outputs ([`84b0683`](https://github.com/entelecheia/hyfi-template/commit/84b0683c4656bbf8b92d13c36fbd260250f4e497))
+
 ## v0.3.11 (2023-06-21)
 ### Fix
 * **template:** Apply the latest template to itself ([`44281e2`](https://github.com/entelecheia/hyfi-template/commit/44281e2941220fb81b3b137f3e3ae63ef023b28f))
