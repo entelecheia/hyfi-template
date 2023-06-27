@@ -443,7 +443,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-version">Check Version</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-workspace">Initialize Workspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-project">Initialize Project</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-configuration">Compose Configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-configuration">Display Configuration</a></li>
 </ul>
@@ -467,12 +467,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/yj.lee/.venvs/hyfi-template/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from .autonotebook import tqdm as notebook_tqdm
-</pre></div>
-</div>
-</div>
 </div>
 <section id="check-version">
 <h2>Check Version<a class="headerlink" href="#check-version" title="Permalink to this heading">#</a></h2>
@@ -485,21 +479,27 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.3.9
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.3.13
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="initialize-workspace">
-<h2>Initialize Workspace<a class="headerlink" href="#initialize-workspace" title="Permalink to this heading">#</a></h2>
-<p>We’ll initialize the workspace using the <code class="docutils literal notranslate"><span class="pre">HyFI.init_workspace</span></code> function. The function takes the following parameters:</p>
+<section id="initialize-project">
+<h2>Initialize Project<a class="headerlink" href="#initialize-project" title="Permalink to this heading">#</a></h2>
+<p>We’ll initialize the project using the <code class="docutils literal notranslate"><span class="pre">HyFI.init_project</span></code> function. The function takes the following parameters:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">workspace</span></code>: The root workspace directory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project</span></code>: The project subdirectory.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">task</span></code>: The specific task within the project.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">log_level</span></code>: Logging level for the workspace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Whether to print verbose messages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_name</span></code>: Name of the project to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_description</span></code>: Description of the project that will be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_root</span></code>: Root directory of the project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_workspace_name</span></code>: Name of the project’s workspace directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">global_hyfi_root</span></code>: Root directory of the global hyfi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">global_workspace_name</span></code>: Name of the global hierachical workspace directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_workers</span></code>: Number of workers to run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_level</span></code>: Log level for the log.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autotime</span></code>: Whether to automatically set time and / or keep track of run times.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retina</span></code>: Whether to use retina or not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Enables or disables logging</p></li>
 </ul>
 <p>We’ll check if we’re running in Google Colab, and if so, we’ll mount Google Drive.</p>
 <div class="cell docutils container">
@@ -507,10 +507,9 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
     <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
-<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_workspace</span><span class="p">(</span>
-    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;hyfi-template&quot;</span><span class="p">,</span>
-    <span class="n">task_name</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
-    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_project</span><span class="p">(</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;hyfi&quot;</span><span class="p">,</span>
+    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
@@ -520,18 +519,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.notebook:Extension autotime not found. Install it first.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.hydra:Initializing `JobLibConfig` class with `__init__` config in `joblib` group.
-INFO:hyfi.hydra:Initializing `PathConfig` class with `__init__` config in `path` group.
-INFO:hyfi.hydra:Initializing `ProjectConfig` class with `__init__` config in `project` group.
-INFO:hyfi.hydra:Initializing `PathConfig` class with `__init__` config in `path` group.
-INFO:hyfi.hydra:Initializing `JobLibConfig` class with `__init__` config in `joblib` group.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi-template
-project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi-template/workspace
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi
+project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi/workspace
 </pre></div>
 </div>
 </div>
@@ -558,15 +547,15 @@ project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi-template/works
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;batch_outputs&#39;: &#39;./tmp/outputs/batch-outputs&#39;,
- &#39;task_cache&#39;: &#39;./tmp/cache&#39;,
- &#39;task_datasets&#39;: &#39;./tmp/datasets&#39;,
- &#39;task_library&#39;: &#39;./tmp/libs&#39;,
- &#39;task_log&#39;: &#39;./tmp/logs&#39;,
- &#39;task_models&#39;: &#39;./tmp/models&#39;,
- &#39;task_outputs&#39;: &#39;./tmp/outputs&#39;,
- &#39;task_root&#39;: &#39;./tmp&#39;,
- &#39;task_tmp&#39;: &#39;./tmp/tmp&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;batch_outputs&#39;: &#39;workspace/tasks/task1/outputs/batch-outputs&#39;,
+ &#39;task_cache&#39;: &#39;workspace/tasks/task1/cache&#39;,
+ &#39;task_datasets&#39;: &#39;workspace/tasks/task1/datasets&#39;,
+ &#39;task_library&#39;: &#39;workspace/tasks/task1/libs&#39;,
+ &#39;task_log&#39;: &#39;workspace/tasks/task1/logs&#39;,
+ &#39;task_models&#39;: &#39;workspace/tasks/task1/models&#39;,
+ &#39;task_outputs&#39;: &#39;workspace/tasks/task1/outputs&#39;,
+ &#39;task_root&#39;: &#39;workspace/tasks/task1&#39;,
+ &#39;task_tmp&#39;: &#39;workspace/tasks/task1/tmp&#39;}
 </pre></div>
 </div>
 </div>
@@ -634,7 +623,7 @@ project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi-template/works
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-version">Check Version</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-workspace">Initialize Workspace</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-project">Initialize Project</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-configuration">Compose Configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-configuration">Display Configuration</a></li>
 </ul>
