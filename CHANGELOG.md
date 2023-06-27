@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.13 (2023-06-27)
+### Fix
+* **dependencies:** Upgrade hyfi to version 0.15.0 ([`1358a0e`](https://github.com/entelecheia/hyfi-template/commit/1358a0e9d3b7bfc153f91af81388c9f4b87d332d))
+
 ## v0.3.12 (2023-06-23)
 ### Fix
 * **notebook:** Remove unused execution counts and cell outputs ([`84b0683`](https://github.com/entelecheia/hyfi-template/commit/84b0683c4656bbf8b92d13c36fbd260250f4e497))
