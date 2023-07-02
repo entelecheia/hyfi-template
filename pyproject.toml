@@ -87,8 +87,8 @@ tag_format = "v$version"
 [tool.semantic_release]
 branch = "main"
 version_toml = "pyproject.toml:tool.poetry.version"
-version_variable = "src/hyfi_template/_version.py:__version__"
-version_pattern = 'src/hyfi_template/conf/about/__init__.yaml:version: "{version}"'
+version_variable = "src/hyfit/_version.py:__version__"
+version_pattern = 'src/hyfit/conf/about/__init__.yaml:version: "{version}"'
 version_source = "tag"
 commit_version_number = true # required for version_source = "tag"
 commit_subject = "chore(release): :rocket: {version} [skip ci]"
