@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.3.14 (2023-07-02)
+### Fix
+* **dependencies:** Upgrade hyfi to 0.16.3 ([`e5e494f`](https://github.com/entelecheia/hyfi-template/commit/e5e494f0cc02e57e319a93735a8ef04dcece81b5))
+
 ## v0.3.13 (2023-06-27)
 ### Fix
 * **dependencies:** Upgrade hyfi to version 0.15.0 ([`1358a0e`](https://github.com/entelecheia/hyfi-template/commit/1358a0e9d3b7bfc153f91af81388c9f4b87d332d))
