@@ -5,12 +5,12 @@ API Reference
    :toctree: _autosummary
    :recursive:
 
-   hyfi_template
+   hyfit
 
 main
 ----
-.. autofunction:: hyfi_template.__cli__.main
+.. autofunction:: hyfit.__cli__.main
 
 get_version
 -----------
-.. autofunction:: hyfi_template.__init__.get_version
+.. autofunction:: hyfit.__init__.get_version
