@@ -17,9 +17,9 @@ github_username: entelecheia
 google_analytics_id: G-SY9MF3HBFB
 logo_path: https://assets.entelecheia.ai/logo.png
 main_branch: main
-package_name: hyfi_template
+package_name: hyfit
 package_scripts:
-- hyfi_template = 'hyfi_template.__cli__:main'
+- hyfit = 'hyfit.__cli__:main'
 poe_task_files:
 - .tasks.toml
 - .tasks-extra.toml

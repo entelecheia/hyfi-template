@@ -1,4 +1,4 @@
-"""Command line interface for hyfi_template"""
+"""Command line interface for hyfit"""
 
 # Importing the libraries
 import sys
