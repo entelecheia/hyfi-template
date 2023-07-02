@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Examples &#8212; HyFI Template</title>
+    <title>HyFI Template Example &#8212; HyFI Template</title>
   
   
   
@@ -182,7 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Examples</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">HyFI Template Example</a></li>
 </ul>
 
     </div>
@@ -303,7 +303,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/entelecheia/hyfi-template/edit/main/book/examples.md" target="_blank"
+      <li><a href="https://github.com/entelecheia/hyfi-template/edit/main/book/examples.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -351,23 +351,6 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       <li><a href="_sources/examples.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="_sources/examples.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -377,7 +360,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -449,7 +432,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Examples</h1>
+    <h1>HyFI Template Example</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -459,8 +442,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-version">Check Version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-project">Initialize Project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-configuration">Compose Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-configuration">Display Configuration</a></li>
 </ul>
             </nav>
         </div>
@@ -472,118 +457,117 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="examples">
-<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h1>
-<p>This page contains a few examples of how you can use HyFI Template package.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
-<p>You can install HyFI Template using <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="hyfi-template-example">
+<h1>HyFI Template Example<a class="headerlink" href="#hyfi-template-example" title="Permalink to this heading">#</a></h1>
+<p>This Jupyter Notebook demonstrates the usage of the <code class="docutils literal notranslate"><span class="pre">hyfit</span></code> package, including initializing a workspace, mounting Google Drive on Colab, and using HyFI to manage configurations.</p>
+<p>First, let’s import the necessary functions and classes from the <code class="docutils literal notranslate"><span class="pre">hyfit</span></code> package.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">hyfi</span><span class="o">-</span><span class="n">template</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hyfit</span> <span class="kn">import</span> <span class="n">get_version</span><span class="p">,</span> <span class="n">HyFI</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: hyfi-template in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (0.3.13)
-Requirement already satisfied: hyfi&lt;0.17.0,&gt;=0.16.3 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi-template) (0.16.3)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/yj.lee/.venvs/hyfi-template/lib/python3.8/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chardet&lt;=5.1.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (5.1.0)
-Requirement already satisfied: click&lt;=8.1.3 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (8.1.3)
-Requirement already satisfied: colorama&lt;0.5.0,&gt;=0.4.3 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.4.6)
-Requirement already satisfied: datasets&lt;=2.13.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.13.1)
-Requirement already satisfied: filelock&lt;=3.12.2,&gt;=3.4 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.12.2)
-Requirement already satisfied: gdown&lt;=4.6.6 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.6.6)
-Requirement already satisfied: huggingface-hub&lt;=0.15.1,&gt;=0.8.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.15.1)
-Requirement already satisfied: hydra-colorlog&lt;2.0.0,&gt;=1.2.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.2.0)
-Requirement already satisfied: hydra-core&lt;2.0.0,&gt;=1.3.2 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.3.2)
-Requirement already satisfied: joblib&lt;=1.3.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.3.0)
-Requirement already satisfied: matplotlib&lt;4.0.0,&gt;=3.7.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.7.1)
-Requirement already satisfied: numpy&lt;=1.24.4 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.24.4)
-Requirement already satisfied: pandas&lt;=2.0.2,&gt;=1.5.3 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.0.2)
-Requirement already satisfied: pathspec&gt;=0.9.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.11.1)
-Requirement already satisfied: pyarrow&lt;=12.0.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (12.0.1)
-Requirement already satisfied: pydantic&lt;2.0.0,&gt;=1.10.7 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.10.10)
-Requirement already satisfied: python-dotenv&lt;2.0.0,&gt;=1.0.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.0.0)
-Requirement already satisfied: requests&lt;3.0.0,&gt;=2.27.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.31.0)
-Requirement already satisfied: rich&lt;14.0,&gt;=12.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (13.4.2)
-Requirement already satisfied: scipy&lt;2.0.0,&gt;=1.10.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.11.1)
-Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.64.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.65.0)
+</div>
+</div>
+<section id="check-version">
+<h2>Check Version<a class="headerlink" href="#check-version" title="Permalink to this heading">#</a></h2>
+<p>Now, let’s get the version of the <code class="docutils literal notranslate"><span class="pre">hyfi_template</span></code> package.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">version</span> <span class="o">=</span> <span class="n">get_version</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HyFI Template version:&quot;</span><span class="p">,</span> <span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: dill&lt;0.3.7,&gt;=0.3.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.3.6)
-</pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: xxhash in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.2.0)
-Requirement already satisfied: multiprocess in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.70.14)
-Requirement already satisfied: fsspec[http]&gt;=2021.11.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2023.6.0)
-Requirement already satisfied: aiohttp in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.8.4)
-Requirement already satisfied: packaging in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (23.1)
-Requirement already satisfied: pyyaml&gt;=5.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (6.0)
-Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from gdown&lt;=4.6.6-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.16.0)
-Requirement already satisfied: beautifulsoup4 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from gdown&lt;=4.6.6-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.12.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from huggingface-hub&lt;=0.15.1,&gt;=0.8.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.7.0)
-Requirement already satisfied: colorlog in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hydra-colorlog&lt;2.0.0,&gt;=1.2.0-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (6.7.0)
-Requirement already satisfied: omegaconf&lt;2.4,&gt;=2.2 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hydra-core&lt;2.0.0,&gt;=1.3.2-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.3.0)
-Requirement already satisfied: antlr4-python3-runtime==4.9.* in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from hydra-core&lt;2.0.0,&gt;=1.3.2-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.9.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.1.0)
-Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.11.0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.40.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.4.4)
-Requirement already satisfied: pillow&gt;=6.2.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (10.0.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.1.0)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from matplotlib&lt;4.0.0,&gt;=3.7.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.8.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from pandas&lt;=2.0.2,&gt;=1.5.3-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2023.3)
-Requirement already satisfied: tzdata&gt;=2022.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from pandas&lt;=2.0.2,&gt;=1.5.3-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2023.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.1.0)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (3.4)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.0.3)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2023.5.7)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: markdown-it-py&gt;=2.2.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from rich&lt;14.0,&gt;=12.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.2.0)
-Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from rich&lt;14.0,&gt;=12.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.15.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: attrs&gt;=17.3.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from aiohttp-&gt;datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (23.1.0)
-Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from aiohttp-&gt;datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (6.0.4)
-Requirement already satisfied: async-timeout&lt;5.0,&gt;=4.0.0a3 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from aiohttp-&gt;datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (4.0.2)
-Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from aiohttp-&gt;datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.9.2)
-Requirement already satisfied: frozenlist&gt;=1.1.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from aiohttp-&gt;datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.3.3)
-Requirement already satisfied: aiosignal&gt;=1.1.2 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from aiohttp-&gt;datasets&lt;=2.13.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.3.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mdurl~=0.1 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&lt;14.0,&gt;=12.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (0.1.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: soupsieve&gt;1.2 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from beautifulsoup4-&gt;gdown&lt;=4.6.6-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (2.4.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: PySocks!=1.5.7,&gt;=1.5.6 in /opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.27.1-&gt;hyfi&lt;0.17.0,&gt;=0.16.3-&gt;hyfi-template) (1.7.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.0.0
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">hyfi_template</span> <span class="kn">import</span> <span class="n">get_version</span>
+<section id="initialize-project">
+<h2>Initialize Project<a class="headerlink" href="#initialize-project" title="Permalink to this heading">#</a></h2>
+<p>We’ll initialize the project using the <code class="docutils literal notranslate"><span class="pre">HyFI.init_project</span></code> function. The function takes the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">project_name</span></code>: Name of the project to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_description</span></code>: Description of the project that will be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_root</span></code>: Root directory of the project.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_workspace_name</span></code>: Name of the project’s workspace directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">global_hyfi_root</span></code>: Root directory of the global hyfi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">global_workspace_name</span></code>: Name of the global hierachical workspace directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_workers</span></code>: Number of workers to run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_level</span></code>: Log level for the log.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autotime</span></code>: Whether to automatically set time and / or keep track of run times.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retina</span></code>: Whether to use retina or not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Enables or disables logging</p></li>
+</ul>
+<p>We’ll check if we’re running in Google Colab, and if so, we’ll mount Google Drive.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
+    <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">get_version</span><span class="p">())</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_project</span><span class="p">(</span>
+    <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;hyfi&quot;</span><span class="p">,</span>
+    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
+    <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi
+project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi/workspace
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compose-configuration">
+<h2>Compose Configuration<a class="headerlink" href="#compose-configuration" title="Permalink to this heading">#</a></h2>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">HyFI.compose</span></code> function to load a configuration file. In this example, we’ll use the default configuration by specifying <code class="docutils literal notranslate"><span class="pre">path=__default__</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;path=__batch__&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="display-configuration">
+<h2>Display Configuration<a class="headerlink" href="#display-configuration" title="Permalink to this heading">#</a></h2>
+<p>Now, let’s print the loaded configuration using the <code class="docutils literal notranslate"><span class="pre">HyFI.print</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HyFI</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">cfg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;batch_outputs&#39;: &#39;workspace/tasks/task1/outputs/batch-outputs&#39;,
+ &#39;task_cache&#39;: &#39;workspace/tasks/task1/cache&#39;,
+ &#39;task_datasets&#39;: &#39;workspace/tasks/task1/datasets&#39;,
+ &#39;task_inputs&#39;: &#39;workspace/tasks/task1/inputs&#39;,
+ &#39;task_library&#39;: &#39;workspace/tasks/task1/libs&#39;,
+ &#39;task_log&#39;: &#39;workspace/tasks/task1/logs&#39;,
+ &#39;task_models&#39;: &#39;workspace/tasks/task1/models&#39;,
+ &#39;task_outputs&#39;: &#39;workspace/tasks/task1/outputs&#39;,
+ &#39;task_root&#39;: &#39;workspace/tasks/task1&#39;,
+ &#39;task_tmp&#39;: &#39;workspace/tasks/task1/tmp&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s it! This example demonstrated the basic usage of the <code class="docutils literal notranslate"><span class="pre">hyfit</span></code> package. You can now use this package to manage your own projects and tasks in a structured manner.</p>
 </section>
 </section>
 
@@ -645,8 +629,10 @@ Requirement already satisfied: aiosignal&gt;=1.1.2 in /opt/hostedtoolcache/Pytho
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-version">Check Version</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-project">Initialize Project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compose-configuration">Compose Configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#display-configuration">Display Configuration</a></li>
 </ul>
   </nav></div>
 

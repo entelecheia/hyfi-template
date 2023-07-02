@@ -1,7 +1,7 @@
-﻿hyfi\_template
-==============
+﻿hyfit
+=====
 
-.. automodule:: hyfi_template
+.. automodule:: hyfit
 
    
    
@@ -33,5 +33,5 @@
    :toctree:
    :recursive:
 
-   hyfi_template.conf
+   hyfit.conf
 
