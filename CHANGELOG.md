@@ -1,5 +1,9 @@
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-07-04)
+### Fix
+* **dependencies:** Upgrade hyfi to 1.0.0 ([`11b1020`](https://github.com/entelecheia/hyfi-template/commit/11b10209da25f9df681554cb9e294b21e1cfc4aa))
+
 ## v0.4.0 (2023-07-02)
 ### Feature
 * **project:** Rename package and CLI entrypoint ([`6a5e00a`](https://github.com/entelecheia/hyfi-template/commit/6a5e00a0e9b97504e30f86c843b6e1cc8ec3a5f8))
