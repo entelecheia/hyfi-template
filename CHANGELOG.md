@@ -1,5 +1,10 @@
 <!--next-version-placeholder-->
 
+## v0.4.5 (2023-07-16)
+### Fix
+* **dependencies:** Upgrade hyfi to 1.2.7 ([`be452b4`](https://github.com/entelecheia/hyfi-template/commit/be452b460a913f20d883df6946b332c59cecbade))
+* **notebook:** Update variable names in print statements ([`674cc52`](https://github.com/entelecheia/hyfi-template/commit/674cc52d0f3406771b49f9e2489253e7fa5a0cd6))
+
 ## v0.4.4 (2023-07-15)
 ### Fix
 * **dependencies:** Upgrade hyfi to 1.2.6 ([`ca01a72`](https://github.com/entelecheia/hyfi-template/commit/ca01a7223c23a8fd2eb0306652f73300b4e9e0f4))
