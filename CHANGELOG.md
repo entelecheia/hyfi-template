@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.4.7 (2023-07-18)
+### Fix
+* **dependencies:** Upgrade hyfi to 1.2.14 ([`7ac7614`](https://github.com/entelecheia/hyfi-template/commit/7ac761428b7dc8b460acf61b4e42e9382e3a08ab))
+* **logger:** Initialize logger ([`0db1e85`](https://github.com/entelecheia/hyfi-template/commit/0db1e858ef44fce6fa4f75428d182368953c0e1a))
+* **dependencies:** Upgrade hyfi to 1.2.10 ([`4e8eced`](https://github.com/entelecheia/hyfi-template/commit/4e8eced10b71db80d894113c1d5c3882158ca1ec))
+* **dependencies:** Upgrade hyfi to 1.2.9 (fix about command) ([`0576a15`](https://github.com/entelecheia/hyfi-template/commit/0576a15021b4b224bce4fe2c309627b751b21b7e))
+
 ## v0.4.6 (2023-07-16)
 ### Fix
 * **dependencies:** Upgrade hyfi to 1.2.8 ([`5fc8c3c`](https://github.com/entelecheia/hyfi-template/commit/5fc8c3cb7390fda9b939e3544d65dd61c12cf832))
