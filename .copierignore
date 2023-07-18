@@ -5,7 +5,6 @@ CHANGELOG.md
 pyproject.toml
 book/usage.md
 book/_toc.yml
-src/hyfit/__init__.py
 src/hyfit/__cli__.py
 src/hyfit/conf/about/__init__.yaml
 src/hyfit/_version.py
