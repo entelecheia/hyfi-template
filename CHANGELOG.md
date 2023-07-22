@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-07-22)
+### Feature
+* **conf:** Create new config.yaml file in conf directory ([`4d6a163`](https://github.com/entelecheia/hyfi-template/commit/4d6a163d179fdf6b2c8f6136178480afa3e1821a))
+
+### Fix
+* **copier.yaml:** Update python environment setup task ([`dba160b`](https://github.com/entelecheia/hyfi-template/commit/dba160bf9d0227c2c27e9ef5ec809906628f1ae2))
+* **dependencies:** Upgrade hyfi to 1.6.1 ([`d8e78a9`](https://github.com/entelecheia/hyfi-template/commit/d8e78a9b79550776a5f241f81b282ac66d65c745))
+
 ## v0.4.8 (2023-07-20)
 ### Fix
 * **dependencies:** Upgrade hyfi to 1.3.1 ([`27d0a8c`](https://github.com/entelecheia/hyfi-template/commit/27d0a8c9f17dd3be1497f1809f402241e0315c16))
