@@ -1,5 +1,18 @@
 <!--next-version-placeholder-->
 
+## v0.6.0 (2023-07-22)
+
+### Feature
+
+* **hyfit:** Add about hyfit configuration file ([`38be6ef`](https://github.com/entelecheia/hyfi-template/commit/38be6efb34b0d6d3c8daa1b31e6a34bafa85c8b0))
+
+### Fix
+
+* **pyproject:** Remove version_pattern from configuration ([`65db2c9`](https://github.com/entelecheia/hyfi-template/commit/65db2c9d2375a9263ae151109ab199c4e8e59476))
+* **hyfit:** Pass config through function arguments ([`1d50e3b`](https://github.com/entelecheia/hyfi-template/commit/1d50e3bc39d50963c9010f41611af5bad667806e))
+* **hyfit:** Update package information handling ([`ead2f10`](https://github.com/entelecheia/hyfi-template/commit/ead2f10b388019046574780933be1fbc3cc94834))
+* **cli:** Change how config_path is passed to hydra_main ([`fe0e89d`](https://github.com/entelecheia/hyfi-template/commit/fe0e89daf4faa2a4e4f19e8ea64827e74365f5d0))
+
 ## v0.5.0 (2023-07-22)
 ### Feature
 * **conf:** Create new config.yaml file in conf directory ([`4d6a163`](https://github.com/entelecheia/hyfi-template/commit/4d6a163d179fdf6b2c8f6136178480afa3e1821a))
