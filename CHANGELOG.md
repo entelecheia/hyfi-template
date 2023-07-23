@@ -1,5 +1,15 @@
 <!--next-version-placeholder-->
 
+## v0.6.1 (2023-07-23)
+
+### Fix
+
+* **hyfit:** Shift to global HyFI initialization and logger setup ([`68caec4`](https://github.com/entelecheia/hyfi-template/commit/68caec46554a346b8cb2aabbda3e0f214dc17901))
+* **hyfit:** Change main function call from hydra_main to hyfi_main ([`096991a`](https://github.com/entelecheia/hyfi-template/commit/096991a9af41554743564b7c979960e12108cec8))
+* **package:** Initialize and set logger for hyfi package ([`582cdc3`](https://github.com/entelecheia/hyfi-template/commit/582cdc3a5e4dbcb65c2995fae8a1b75ca2fc1b66))
+* **cli:** Replace hydra_main with hyfi_main in main function ([`f1126f0`](https://github.com/entelecheia/hyfi-template/commit/f1126f0be43a790f71508516f4f5c504a97e8eb8))
+* **dependencies:** Upgrade hyfi to 1.8.1 ([`1973835`](https://github.com/entelecheia/hyfi-template/commit/197383546fb8ad40c8047ad9f9337dfc8c02985d))
+
 ## v0.6.0 (2023-07-22)
 
 ### Feature
