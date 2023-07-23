@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.6.2 (2023-07-23)
+
+### Fix
+
+* **hyfit:** Use explicit import for HyFI class, add HyFI and get_version to __all__ ([`b3f0376`](https://github.com/entelecheia/hyfi-template/commit/b3f03763538dfcfd6cd660800c3f7f426c523326))
+* **package:** Expose HyFI and get_version functions in __all__ ([`2f39d7d`](https://github.com/entelecheia/hyfi-template/commit/2f39d7d485d4c839a5932452440b0dc38f367669))
+* **dependencies:** Upgrade hyfi to 1.8.2 ([`6895a76`](https://github.com/entelecheia/hyfi-template/commit/6895a766e98bb14a9b28e81499288383ddf02fcb))
+
 ## v0.6.1 (2023-07-23)
 
 ### Fix
