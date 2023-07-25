@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.6.3 (2023-07-25)
+
+### Fix
+
+* **hyfit:** Change package name to package path and add empty plugins list ([`6fcf8e2`](https://github.com/entelecheia/hyfi-template/commit/6fcf8e2f9b9cc16ecfda58bc70abe979db3d01cb))
+* **dependencies:** Upgrade hyfi to 1.9.3 ([`2a8d512`](https://github.com/entelecheia/hyfi-template/commit/2a8d512b4bd3ee9c826c884a8e97bde100858551))
+* **package_initialization:** Change from package name to package path ([`0bcc67a`](https://github.com/entelecheia/hyfi-template/commit/0bcc67a0d86d0e63129a00a8ae5ba97a92cf65e1))
+
 ## v0.6.2 (2023-07-23)
 
 ### Fix
