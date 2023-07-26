@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.6.4 (2023-07-26)
+
+### Fix
+
+* **dependencies:** Upgrade hyfi to 1.11.0 ([`d58e0c6`](https://github.com/entelecheia/hyfi-template/commit/d58e0c6aff313a4cfd6a04964aab5056d5ca031f))
+
 ## v0.6.3 (2023-07-25)
 
 ### Fix
