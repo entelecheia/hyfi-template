@@ -485,7 +485,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.0.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyFI Template version: 0.6.4
 </pre></div>
 </div>
 </div>
@@ -493,7 +493,7 @@ document.write(`
 </section>
 <section id="initialize-project">
 <h2>Initialize Project<a class="headerlink" href="#initialize-project" title="Permalink to this heading">#</a></h2>
-<p>We’ll initialize the project using the <code class="docutils literal notranslate"><span class="pre">HyFI.init_project</span></code> function. The function takes the following parameters:</p>
+<p>We’ll initialize the project using the <code class="docutils literal notranslate"><span class="pre">HyFI.initialize</span></code> function. The function takes the following parameters:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">project_name</span></code>: Name of the project to use.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">project_description</span></code>: Description of the project that will be used.</p></li>
@@ -502,7 +502,7 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">global_hyfi_root</span></code>: Root directory of the global hyfi.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">global_workspace_name</span></code>: Name of the global hierachical workspace directory.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_workers</span></code>: Number of workers to run.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">log_level</span></code>: Log level for the log.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging_level</span></code>: Log level for the log.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autotime</span></code>: Whether to automatically set time and / or keep track of run times.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">retina</span></code>: Whether to use retina or not.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code>: Enables or disables logging</p></li>
@@ -513,20 +513,26 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">is_colab</span><span class="p">():</span>
     <span class="n">HyFI</span><span class="o">.</span><span class="n">mount_google_drive</span><span class="p">()</span>
 
-<span class="n">ws</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">init_project</span><span class="p">(</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">initialize</span><span class="p">(</span>
     <span class="n">project_name</span><span class="o">=</span><span class="s2">&quot;hyfi&quot;</span><span class="p">,</span>
-    <span class="n">log_level</span><span class="o">=</span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span>
+    <span class="n">logging_level</span><span class="o">=</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
     <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_dir</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">project_workspace_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_dir:&quot;</span><span class="p">,</span> <span class="n">h</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">root_dir</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;project_workspace_dir:&quot;</span><span class="p">,</span> <span class="n">h</span><span class="o">.</span><span class="n">project</span><span class="o">.</span><span class="n">workspace_dir</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi
-project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi/workspace
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:hyfi.utils.notebooks:Google Colab not detected.
+INFO:hyfi.utils.notebooks:Extension autotime not found. Install it first.
+INFO:hyfi.joblib.joblib:initialized batcher with &lt;hyfi.joblib.batch.batcher.Batcher object at 0x7fc72dd2b0a0&gt;
+INFO:hyfi.main.config:HyFi project [hyfi] initialized
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>project_dir: /home/yj.lee/.hyfi/projects/hyfi
+project_workspace_dir: /home/yj.lee/.hyfi/projects/hyfi/workspace
 </pre></div>
 </div>
 </div>
@@ -537,7 +543,7 @@ project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi/workspace
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">HyFI.compose</span></code> function to load a configuration file. In this example, we’ll use the default configuration by specifying <code class="docutils literal notranslate"><span class="pre">path=__default__</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;path=__batch__&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cfg</span> <span class="o">=</span> <span class="n">HyFI</span><span class="o">.</span><span class="n">compose</span><span class="p">(</span><span class="s2">&quot;project&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -553,16 +559,84 @@ project_workspace_dir: /home/yj.lee/.hyfi/workspace/projects/hyfi/workspace
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;batch_outputs&#39;: &#39;workspace/tasks/task1/outputs/batch-outputs&#39;,
- &#39;task_cache&#39;: &#39;workspace/tasks/task1/cache&#39;,
- &#39;task_datasets&#39;: &#39;workspace/tasks/task1/datasets&#39;,
- &#39;task_inputs&#39;: &#39;workspace/tasks/task1/inputs&#39;,
- &#39;task_library&#39;: &#39;workspace/tasks/task1/libs&#39;,
- &#39;task_log&#39;: &#39;workspace/tasks/task1/logs&#39;,
- &#39;task_models&#39;: &#39;workspace/tasks/task1/models&#39;,
- &#39;task_outputs&#39;: &#39;workspace/tasks/task1/outputs&#39;,
- &#39;task_root&#39;: &#39;workspace/tasks/task1&#39;,
- &#39;task_tmp&#39;: &#39;workspace/tasks/task1/tmp&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;_config_group_&#39;: &#39;/project&#39;,
+ &#39;_config_name_&#39;: &#39;__init__&#39;,
+ &#39;dotenv&#39;: {&#39;CACHED_PATH_CACHE_ROOT&#39;: None
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>,
+            &#39;CUDA_DEVICE_ORDER&#39;: None,
+            &#39;CUDA_VISIBLE_DEVICES&#39;: None,
+            &#39;DOTENV_DIR&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/book&#39;,
+            &#39;DOTENV_FILE&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/book/.env&#39;,
+            &#39;DOTENV_FILENAME&#39;: &#39;.env&#39;,
+            &#39;ECOS_API_KEY&#39;: None,
+            &#39;FRED_API_KEY&#39;: None,
+            &#39;HF_USER_ACCESS_TOKEN&#39;: None,
+            &#39;HUGGING_FACE_HUB_TOKEN&#39;: None,
+            &#39;HYFI_GLOBAL_ROOT&#39;: None,
+            &#39;HYFI_GLOBAL_WORKSPACE_NAME&#39;: None,
+            &#39;HYFI_LOG_LEVEL&#39;: &#39;WARNING&#39;,
+            &#39;HYFI_NUM_WORKERS&#39;: None,
+            &#39;HYFI_PROJECT_DESC&#39;: None,
+            &#39;HYFI_PROJECT_NAME&#39;: None,
+            &#39;HYFI_PROJECT_ROOT&#39;: None,
+            &#39;HYFI_PROJECT_WORKSPACE_NAME&#39;: None,
+            &#39;HYFI_RESOURCE_DIR&#39;: None,
+            &#39;HYFI_SECRETS_DIR&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/book/secrets&#39;,
+            &#39;HYFI_VERBOSE&#39;: False,
+            &#39;KMP_DUPLICATE_LIB_OK&#39;: None,
+            &#39;LABEL_STUDIO_SERVER&#39;: None,
+            &#39;NASDAQ_API_KEY&#39;: None,
+            &#39;OPENAI_API_KEY&#39;: None,
+            &#39;TOKENIZERS_PARALLELISM&#39;: None,
+            &#39;WANDB_API_KEY&#39;: None,
+            &#39;WANDB_DIR&#39;: None,
+            &#39;WANDB_DISABLED&#39;: None,
+            &#39;WANDB_NOTEBOOK_NAME&#39;: None,
+            &#39;WANDB_PROJECT&#39;: None,
+            &#39;WANDB_SILENT&#39;: None},
+ &#39;global_hyfi_root&#39;: &#39;/home/yj.lee&#39;,
+ &#39;global_workspace_name&#39;: &#39;.hyfi&#39;,
+ &#39;joblib&#39;: {&#39;backend&#39;: &#39;joblib&#39;,
+            &#39;initialize_backend&#39;: True,
+            &#39;minibatch_size&#39;: 1000,
+            &#39;num_gpus&#39;: 0,
+            &#39;num_workers&#39;: &#39;1&#39;,
+            &#39;verbose&#39;: False},
+ &#39;num_workers&#39;: &#39;1&#39;,
+ &#39;path&#39;: {&#39;_config_group_&#39;: &#39;/path&#39;,
+          &#39;_config_name_&#39;: &#39;__project__&#39;,
+          &#39;dirnames&#39;: {&#39;archives&#39;: &#39;archives&#39;,
+                       &#39;cache&#39;: &#39;.cache&#39;,
+                       &#39;config_json&#39;: &#39;config.json&#39;,
+                       &#39;config_yaml&#39;: &#39;config.yaml&#39;,
+                       &#39;configs&#39;: &#39;configs&#39;,
+                       &#39;datasets&#39;: &#39;datasets&#39;,
+                       &#39;inputs&#39;: &#39;inputs&#39;,
+                       &#39;library&#39;: &#39;libs&#39;,
+                       &#39;logs&#39;: &#39;logs&#39;,
+                       &#39;models&#39;: &#39;models&#39;,
+                       &#39;modules&#39;: &#39;modules&#39;,
+                       &#39;outputs&#39;: &#39;outputs&#39;,
+                       &#39;tmp&#39;: &#39;tmp&#39;},
+          &#39;global_hyfi_root&#39;: &#39;/home/yj.lee&#39;,
+          &#39;global_workspace_name&#39;: &#39;.hyfi&#39;,
+          &#39;home&#39;: &#39;/home/yj.lee&#39;,
+          &#39;hyfi&#39;: &#39;/home/yj.lee/.venvs/hyfi-template/lib/python3.8/site-packages/hyfi&#39;,
+          &#39;package&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/src/hyfit&#39;,
+          &#39;project_name&#39;: &#39;hyfi&#39;,
+          &#39;project_root&#39;: &#39;/home/yj.lee/.hyfi/projects/hyfi&#39;,
+          &#39;project_workspace_name&#39;: &#39;workspace&#39;,
+          &#39;resources&#39;: &#39;/home/yj.lee/.venvs/hyfi-template/lib/python3.8/site-packages/hyfi/resources&#39;,
+          &#39;runtime&#39;: &#39;/mnt/nvme1n1p2/home/yj.lee/workspace/projects/hyfi-template/book&#39;},
+ &#39;project_description&#39;: &#39;&#39;,
+ &#39;project_name&#39;: &#39;hyfi&#39;,
+ &#39;project_root&#39;: &#39;/home/yj.lee/.hyfi/projects/hyfi&#39;,
+ &#39;project_workspace_name&#39;: &#39;workspace&#39;,
+ &#39;use_huggingface_hub&#39;: False,
+ &#39;use_wandb&#39;: False,
+ &#39;verbose&#39;: &#39;True&#39;}
 </pre></div>
 </div>
 </div>
