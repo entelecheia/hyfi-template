@@ -1,5 +1,14 @@
 <!--next-version-placeholder-->
 
+## v0.6.5 (2023-08-07)
+
+### Fix
+
+* **examples.ipynb:** Correct project and workspace directory paths ([`42f509d`](https://github.com/entelecheia/hyfi-template/commit/42f509d89bf9ed28cc42d5c5258c312ff541cea8))
+* **tests:** Update HyFi usage in notebook tests ([`d89db42`](https://github.com/entelecheia/hyfi-template/commit/d89db429ed067847f1c9e06bfaa3dc13c1ea9b8f))
+* **notebook:** Align property and method calls with new functionality ([`1d233c2`](https://github.com/entelecheia/hyfi-template/commit/1d233c285c91649f8e77c005912031ad8f7b4654))
+* **dependencies:** Upgrade hyfi to 1.21.0 ([`e92ca08`](https://github.com/entelecheia/hyfi-template/commit/e92ca081239ed093c011fd46ba66cda3e62d38ac))
+
 ## v0.6.4 (2023-07-26)
 
 ### Fix
