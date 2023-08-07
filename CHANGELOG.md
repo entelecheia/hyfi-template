@@ -1,5 +1,12 @@
 <!--next-version-placeholder-->
 
+## v0.6.6 (2023-08-07)
+
+### Fix
+
+* **tests:** Adjust print statements and logging level in tests.ipynb ([`f6f7e38`](https://github.com/entelecheia/hyfi-template/commit/f6f7e3898e1c93fcbe47b8e358b1270a8c6c76c6))
+* **tests:** Change logging_level in HyFI INITIALIZE from DEBUG to INFO, add app_name ([`bb41216`](https://github.com/entelecheia/hyfi-template/commit/bb412165c02ba1a23ed3900b7b537c02a0105960))
+
 ## v0.6.5 (2023-08-07)
 
 ### Fix
