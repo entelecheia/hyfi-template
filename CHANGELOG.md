@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.6.7 (2023-08-22)
+
+### Fix
+
+* **Makefile:** Use --trust instead of --UNSAFE with copier copy ([`298ffbc`](https://github.com/entelecheia/hyfi-template/commit/298ffbc82b8e7bc9de6ddd797b00668fbb143f41))
+
 ## v0.6.6 (2023-08-07)
 
 ### Fix
