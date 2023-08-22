@@ -1215,28 +1215,28 @@ packaging = "*"
 
 [[package]]
 name = "hyfi"
-version = "1.22.0"
+version = "1.29.8"
 description = "Hydra Fast Interface (Hydra and Pydantic based interface framework)"
 optional = false
 python-versions = ">=3.8.1,<3.12"
 files = [
-    {file = "hyfi-1.22.0-py3-none-any.whl", hash = "sha256:9b6050884bef629fd838bd1cca5ded9ac26e77e409d46e8608d02fa0f5c581a5"},
-    {file = "hyfi-1.22.0.tar.gz", hash = "sha256:339d28c3aabf7c75365c2101a9eb0bef2e5996ec6889127c2767bd7c3eb1177e"},
+    {file = "hyfi-1.29.8-py3-none-any.whl", hash = "sha256:7901d290d112dd3f20a51415dc70526aab97956e6ade8e11905b4de9e7b70fbb"},
+    {file = "hyfi-1.29.8.tar.gz", hash = "sha256:165d702f9b9576159397b02b120e6fb9f4710fa5987f923052096d3d44ab825b"},
 ]
 
 [package.dependencies]
 chardet = "<=5.2.0"
 click = "<=8.1.6"
 colorama = ">=0.4.3,<0.5.0"
-datasets = ">=2.0.0,<=2.14.3"
+datasets = ">=2.0.0,<=2.14.4"
 filelock = ">=3.4,<=3.12.2"
 gdown = "<=4.6.6"
 huggingface-hub = ">=0.8.1,<=0.16.4"
 hydra-colorlog = ">=1.2.0,<2.0.0"
 hydra-core = ">=1.3.2,<2.0.0"
-joblib = ">=1.3.1,<2.0.0"
+joblib = ">=1.2.0,<=1.3.2"
 matplotlib = ">=3.7.1,<4.0.0"
-numpy = "<=1.24.4"
+numpy = "<=1.25.2"
 pandas = ">=1.5.3,<=2.0.3"
 pathspec = ">=0.9.0"
 pyarrow = "<=12.0.1"
@@ -3430,4 +3430,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8.1,<3.12"
-content-hash = "53b85b0958f23bba51167547ccfff56276d68aed3923d1a2f55bc729ff8c6e50"
+content-hash = "14d8d6c58184c00b537d86ec93ed62972ea57774180fcc13f84dab4f41f3b0aa"
