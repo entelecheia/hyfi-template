@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.6.8 (2023-08-24)
+
+### Fix
+
+* **notebook:** Rename dotenv to env in tests.ipynb.jinja ([`88e343b`](https://github.com/entelecheia/hyfi-template/commit/88e343bdb55c8a3b6959cfaa3aae6f1cba7e07a7))
+* **tests:** Enhance code readability and change dotenv to env in project method call ([`65b4d1d`](https://github.com/entelecheia/hyfi-template/commit/65b4d1d8fef8b764441f8a096e4be67d43ead322))
+* **dependencies:** Upgrade hyfi to 1.32.1 ([`ba8344d`](https://github.com/entelecheia/hyfi-template/commit/ba8344d0893e3b33a4405c4e4a1e3e957aac374d))
+
 ## v0.6.7 (2023-08-22)
 
 ### Fix
