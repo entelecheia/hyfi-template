@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.6.9 (2024-01-03)
+
+### Fix
+
+* **workflows:** Update GitHub Actions syntax and dependencies ([`6cfc4a9`](https://github.com/entelecheia/hyfi-template/commit/6cfc4a984f61f60827f6c770b29f1c80ec37d14d))
+* **release-workflow:** Update checkout action ([`e304043`](https://github.com/entelecheia/hyfi-template/commit/e304043fe67b34f0b4df842a5562fbaf09a5807f))
+* **dependencies:** Upgrade hyfi to 1.35.1 ([`d4c8fd0`](https://github.com/entelecheia/hyfi-template/commit/d4c8fd07b6cce9a1326a2f21ed844cb3de9cf909))
+
 ## v0.6.8 (2023-08-24)
 
 ### Fix
