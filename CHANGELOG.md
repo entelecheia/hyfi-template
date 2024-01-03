@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.6.10 (2024-01-03)
+
+### Fix
+
+* **dependencies:** Upgrade black to >=23.0.0 ([`93cbcfb`](https://github.com/entelecheia/hyfi-template/commit/93cbcfbedf1612655d3f0a5905ac69e0cc229488))
+
 ## v0.6.9 (2024-01-03)
 
 ### Fix
