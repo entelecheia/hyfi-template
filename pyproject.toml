@@ -13,7 +13,7 @@ packages = [{ include = "hyfit", from = "src" }]
 hyfit = 'hyfit.__cli__:main'
 
 [tool.poetry.dependencies]
-python = ">=3.9,<=3.12"
+python = ">=3.9,<3.13"
 hyfi = "^1.35.1"
 # hyfi = {path = "../hyfi", develop = true}
 
