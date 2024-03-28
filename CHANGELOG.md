@@ -1,5 +1,19 @@
 <!--next-version-placeholder-->
 
+## v0.7.0 (2024-03-28)
+
+### Feature
+
+* **copier:** New feature for opening project homepage link ([`a61e29e`](https://github.com/entelecheia/hyfi-template/commit/a61e29ea2ede2e75102b4a806fdce78acc507223))
+
+### Fix
+
+* **dependencies:** Update hyfi version to 1.36.3 ([`ba7b047`](https://github.com/entelecheia/hyfi-template/commit/ba7b047ac7d5b3120956570a94f8afe6b17db341))
+
+### Documentation
+
+* Add new section on managing actions secrets and variables ([`4045458`](https://github.com/entelecheia/hyfi-template/commit/4045458258f20d29e34e14e4f2141dd2ef3425b4))
+
 ## v0.6.10 (2024-01-03)
 
 ### Fix
