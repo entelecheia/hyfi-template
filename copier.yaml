@@ -26,3 +26,7 @@ project_name:
 package_name:
   type: str
   help: What is your Python module name? (it will be used in `import package_name`)
+
+open_link:
+  type: bool
+  help: Do you want to open the project homepage link when you run CLI commands?

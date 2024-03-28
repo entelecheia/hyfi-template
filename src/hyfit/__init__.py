@@ -1,3 +1,5 @@
+"""Implements the package initialization logic"""
+
 import os
 
 from hyfi import HyFI
