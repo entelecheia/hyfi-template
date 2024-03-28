@@ -17,7 +17,6 @@ _tasks:
   # Strings get executed under system's default shell
   - "WORKON_HOME=${WORKON_HOME:-$HOME/.venvs} && python3 -m venv $WORKON_HOME/{{project_name}} && . $WORKON_HOME/{{project_name}}/bin/activate && pip install --upgrade pip setuptools wheel && poetry add hyfi@latest"
   # - "WORKON_HOME=${WORKON_HOME:-$HOME/.venvs} && python3 -m venv $WORKON_HOME/{{project_name}} && . $WORKON_HOME/{{project_name}}/bin/activate && pip install --upgrade pip setuptools wheel && poetry add hyfi@latest && poetry run hyfi cmd=copy_conf copier.dst_path=src/{{package_name}}/conf copier.exclude='**/*/about/__init__.yaml'"
-  - yq eval '.["_open_link_"] = {{open_link}}' -i src/{{package_name}}/conf/about/{{package_name}}.yaml
 
 # questions
 project_name:
