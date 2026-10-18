@@ -1,3 +1,5 @@
+> **Archived 2026-10.** This template generated HyFI 1.x projects. HyFI 2.0 dropped the 1.x API; to write a HyFI 2.0 plugin see https://hyfi.entelecheia.ai/plugins/.
+
 # HyFI Template
 
 [![pypi-image]][pypi-url]
